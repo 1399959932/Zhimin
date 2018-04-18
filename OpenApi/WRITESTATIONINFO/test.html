@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>执法数据采集设备基本信息上传
+</title>
+<link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container" style="width:550px"><br />
+<h1>执法数据采集设备基本信息上传</h1><br />
+<form role="form" action="index.php" method="post">
+<div class="form-group">
+<label for="">执法数据采集设备产品编码<font color=red>*</font></label>
+<input name="gzz_xh" type="input" class="form-control" id="gzz_xh" value="WIN-02RMRRIUV6G" placeholder="">
+</div>
+<div class="form-group">
+<label for="">执法数据采集设备IP</label>
+<input type="input" class="form-control" id="gzz_ipdz" name="gzz_ipdz" placeholder="">
+</div>
+<div class="form-group">
+<label for="">在线状态</label>
+</div>
+<div class="form-group">
+  <input type="radio" name="zxzt" id="zxzt1" value="1" checked>
+  在线&nbsp;&nbsp;
+  <input type="radio" name="zxzt" id="zxzt2" value="0">
+  不在线
+</div>
+<div class="form-group">
+<label for="">启用状态</label>
+</div>
+<div class="form-group">
+  <input type="radio" name="qyzt" id="qyzt1" value="1" checked>
+  启用&nbsp;&nbsp;
+  <input type="radio" name="qyzt" id="qyzt2" value="0">
+  不启用
+</div>
+
+<button type="submit" class="btn btn-primary" style="width:100px; height:40px">提  交</button><input name="authKey" type="hidden" value="2f73ab56b3921ad76321806666a9787a" />
+</form>
+
+    <script type="text/javascript">
+//解决IE下不支持placeholder属性
+        $("input").placeholder();
+    </script>
+</div>
+</body>
+</html>

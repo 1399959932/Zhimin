@@ -1,0 +1,30 @@
+2017-07-12 17:07:13[INFO] =success[用户查询：产品序号（00001）].
+2017-07-12 17:07:13[INFO] =success[SELECT * from `zm_device_log` where 1 AND `deviceid`='00001'].
+2017-07-12 17:07:13[INFO] =success[查询成功！].
+2017-07-12 17:07:32[INFO] =success[用户查询：产品序号（00001）].
+2017-07-12 17:07:32[INFO] =success[SELECT * from `zm_device_log` where 1 AND `deviceid`='00001'].
+2017-07-12 17:07:32[INFO] =success[查询成功！].
+2017-07-15 23:05:41[INFO] =success[用户查询：产品序号（00023）].
+2017-07-15 23:05:41[INFO] =success[SELECT * from `zm_device_log` where 1 AND `deviceid`='00023'].
+2017-07-15 23:05:41[INFO] =success[查询成功！].
+2017-07-15 23:07:10[INFO] =success[用户查询：产品序号（00023）].
+2017-07-15 23:07:10[INFO] =error[输入的认证密钥有误或过期，查询失败！].
+2017-07-15 23:07:20[INFO] =success[用户查询：产品序号（00023）].
+2017-07-15 23:07:20[INFO] =success[SELECT * from `zm_device_log` where 1 AND `deviceid`='00023'].
+2017-07-15 23:07:20[INFO] =success[查询成功！].
+2017-07-15 23:12:25[INFO] =error[用户没查询任何值].
+2017-07-15 23:12:25[INFO] =error[产品序号为空].
+2017-07-15 23:12:25[INFO] =success[SELECT * from `zm_device_log` where 0 AND '1'='0'].
+2017-07-15 23:12:25[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-15 23:12:28[INFO] =success[用户查询：产品序号（00023）].
+2017-07-15 23:12:28[INFO] =success[SELECT * from `zm_device_log` where 1 AND `deviceid`='00023'].
+2017-07-15 23:12:28[INFO] =success[查询成功！].
+2017-07-15 23:12:47[INFO] =success[用户查询：产品序号（00023）].
+2017-07-15 23:12:47[INFO] =success[SELECT * from `zm_device_log` where 1 AND `deviceid`='00023'].
+2017-07-15 23:12:47[INFO] =success[查询成功！].
+2017-07-16 09:41:41[INFO] =error[用户没查询任何值].
+2017-07-16 09:41:41[INFO] =error[产品序号为空].
+2017-07-16 09:41:41[INFO] =error[认证密钥为空，查询失败！].
+2017-07-16 09:41:54[INFO] =error[用户没查询任何值].
+2017-07-16 09:41:54[INFO] =error[产品序号为空].
+2017-07-16 09:41:54[INFO] =error[认证密钥为空，查询失败！].

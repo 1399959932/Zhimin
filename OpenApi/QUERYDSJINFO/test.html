@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>执法记录仪基本信息查询
+</title>
+<link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container" style="width:500px"><br />
+<h1>执法记录仪基本信息查询</h1><br />
+<form role="form" action="index.php" method="post">
+<div class="form-group">
+<label for="wjbh">文件编号</label>
+<input type="input" class="form-control" id="wjbh" name="wjbh" placeholder="">
+</div>
+<div class="form-group">
+<label for="jy_xm">使用者姓名</label>
+<input type="input" class="form-control" id="jy_xm" value="刘云田" name="jy_xm" placeholder="">
+</div>
+<div class="form-group">
+<label for="jybh">（警员）编号<font color=red>*</font></label>
+<input type="input" class="form-control" id="jybh" value="se001 " name="jybh" placeholder="">
+</div>
+<div class="form-group">
+<label for="jgdm">单位编号</label>
+<input type="input" class="form-control" id="jgdm" name="jgdm" placeholder="">
+</div>
+<div class="form-group">
+<label for="dwmc">单位名称</label>
+<input type="input" class="form-control" id="dwmc" name="dwmc" placeholder="">
+</div>
+<div class="form-group">
+<label for="psrq">拍摄日期</label>
+<input type="input" class="form-control" id="psrq" name="psrq" placeholder="">
+</div>
+<button type="submit" class="btn btn-primary" style="width:100px; height:40px">提  交</button><input name="authKey" type="hidden" value="2f73ab56b3921ad76321806666a9787a" />
+</form>
+
+    <script type="text/javascript">
+//解决IE下不支持placeholder属性
+        $("input").placeholder();
+    </script>
+</div>
+</body>
+</html>

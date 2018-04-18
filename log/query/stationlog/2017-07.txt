@@ -1,0 +1,37 @@
+2017-07-12 16:54:15[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC）].
+2017-07-12 16:54:15[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='zm-PC'].
+2017-07-12 16:54:15[INFO] =success[查询成功！].
+2017-07-12 16:54:34[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC1）].
+2017-07-12 16:54:34[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='zm-PC1'].
+2017-07-12 16:54:34[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-12 17:00:12[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC）].
+2017-07-12 17:00:12[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='zm-PC'].
+2017-07-12 17:00:12[INFO] =success[查询成功！].
+2017-07-12 17:00:23[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC）].
+2017-07-12 17:00:23[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='zm-PC'].
+2017-07-12 17:00:23[INFO] =success[查询成功！].
+2017-07-12 17:00:38[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC）].
+2017-07-12 17:00:38[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='zm-PC'].
+2017-07-12 17:00:39[INFO] =success[查询成功！].
+2017-07-12 17:00:58[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC）].
+2017-07-12 17:00:58[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='zm-PC'].
+2017-07-12 17:00:58[INFO] =success[查询成功！].
+2017-07-12 17:01:21[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC）].
+2017-07-12 17:01:21[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='zm-PC'].
+2017-07-12 17:01:21[INFO] =success[查询成功！].
+2017-07-15 23:13:24[INFO] =success[用户查询：执法数据采集设备产品编码（USER-20170418SV）].
+2017-07-15 23:13:24[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='USER-20170418SV'].
+2017-07-15 23:13:24[INFO] =success[查询成功！].
+2017-07-15 23:13:39[INFO] =success[用户查询：执法数据采集设备产品编码（WIN-02RMRRIUV6G）].
+2017-07-15 23:13:39[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='WIN-02RMRRIUV6G'].
+2017-07-15 23:13:39[INFO] =success[查询成功！].
+2017-07-16 09:45:48[INFO] =error[用户没查询任何值].
+2017-07-16 09:45:48[INFO] =success[SELECT * from `zm_station_log` where 0].
+2017-07-16 09:45:48[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-16 09:47:04[INFO] =error[执法数据采集设备产品编码为空].
+2017-07-16 09:47:04[INFO] =error[用户没查询任何值].
+2017-07-16 09:47:04[INFO] =success[SELECT * from `zm_station_log` where 0].
+2017-07-16 09:47:04[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-16 09:47:13[INFO] =success[用户查询：执法数据采集设备产品编码（WIN-02RMRRIUV6G）].
+2017-07-16 09:47:13[INFO] =success[SELECT * from `zm_station_log` where 1 AND `hostname`='WIN-02RMRRIUV6G'].
+2017-07-16 09:47:13[INFO] =success[查询成功！].

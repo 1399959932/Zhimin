@@ -1,0 +1,30 @@
+1	Uncaught exception 'LoadClassNotExistsError' with message '指定的类 AaaModule不存在。' in /home/wwwroot/zhimin/core/Zhimin.php:733
+Stack trace:
+#0 /home/wwwroot/zhimin/core/Zhimin.php(710): Zhimin::_load()
+#1 /home/wwwroot/zhimin/core/Zhimin.php(381): Zhimin::load('app.controllers...')
+#2 /home/wwwroot/zhimin/core/Zhimin.php(210): Zhimin::m()
+#3 /home/wwwroot/zhimin/core/Zhimin.php(188): Zhimin::_execute()
+#4 /home/wwwroot/index.php(7): Zhimin::run('/home/wwwroot/a...')
+#5 {main}
+  thrown	/home/wwwroot/zhimin/core/Zhimin.php
+
+1	Uncaught exception 'LoadClassNotExistsError' with message '指定的类 AaModule不存在。' in /home/wwwroot/zhimin/core/Zhimin.php:733
+Stack trace:
+#0 /home/wwwroot/zhimin/core/Zhimin.php(710): Zhimin::_load()
+#1 /home/wwwroot/zhimin/core/Zhimin.php(381): Zhimin::load('app.controllers...')
+#2 /home/wwwroot/zhimin/core/Zhimin.php(210): Zhimin::m()
+#3 /home/wwwroot/zhimin/core/Zhimin.php(188): Zhimin::_execute()
+#4 /home/wwwroot/index.php(7): Zhimin::run('/home/wwwroot/a...')
+#5 {main}
+  thrown	/home/wwwroot/zhimin/core/Zhimin.php
+
+1	Uncaught exception 'LoadClassNotExistsError' with message '指定的类 AaModule不存在。' in /home/wwwroot/zhimin/core/Zhimin.php:733
+Stack trace:
+#0 /home/wwwroot/zhimin/core/Zhimin.php(710): Zhimin::_load()
+#1 /home/wwwroot/zhimin/core/Zhimin.php(381): Zhimin::load('app.controllers...')
+#2 /home/wwwroot/zhimin/core/Zhimin.php(210): Zhimin::m()
+#3 /home/wwwroot/zhimin/core/Zhimin.php(188): Zhimin::_execute()
+#4 /home/wwwroot/index.php(7): Zhimin::run('/home/wwwroot/a...')
+#5 {main}
+  thrown	/home/wwwroot/zhimin/core/Zhimin.php
+

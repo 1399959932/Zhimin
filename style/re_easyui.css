@@ -1,0 +1,26 @@
+.textbox-label-top {
+  /*display: block;*/
+  display:0;
+  width: auto;
+  padding: 0;
+}
+.textbox{
+	background: none;
+	border: 0;
+	border-radius:0;
+	*margin-top: -1px;
+}
+.combo-arrow{
+	background: url("../images/select_bg.jpg") 0 0 no-repeat;
+	opacity: 1;
+  filter: alpha(opacity=100);
+  *margin-top: 1px;
+}
+.panel-header, .panel-body{border-color: #aeaeae;}
+.tree-node-selected,.combobox-item-selected{background: #a3d2f6;}
+.tree-node-hover,.combobox-item-hover{background: #e1effa;}
+.combo-arrow:hover {
+	background: url("../images/select_bg_b.jpg") 0 0 no-repeat;
+    background-color: unset;
+}
+.textbox .textbox-prompt{margin-top:-1px;}

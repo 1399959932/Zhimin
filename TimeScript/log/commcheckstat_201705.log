@@ -1,0 +1,36 @@
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿2017-05-28 02:00:01[INFO] host=[localhost], use=[root]lianjie chenggong.
+<p></p>2017-05-28 02:00:01[INFO] sql=[select t.hostcode, t.danwei, date(t.createdate) as date, t.filetype, count(*) as num, sum(t.filelen) as len, 
+        round(sum(t.playtime/1000)) as fitime, sum(t.is_flg) as fignum 
+        from zm_video_list t where t.uploaddate like '2017-05-27%' group by t.hostcode, t.danwei, date(t.createdate), t.filetype].
+<p></p><br><hr /><br>PHP Notice:  Undefined index: vedionum in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: photonum in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: vediosize in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: photosize in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: vediotime in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: vedionum in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: photonum in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: vediosize in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: photosize in /var/www/html/TimeScript/commcheckstat.php on line 64
+PHP Notice:  Undefined index: vediotime in /var/www/html/TimeScript/commcheckstat.php on line 64
+2017-05-28 02:00:01[INFO] sql_ins=[insert into zm_check_stat(statdate,usecode,unitcode,vedionum,
+				           audionum,photonum,biaozhunum,vediosize,audiosize, photosize,vediotime,creatime) 
+				           values('2017-05-27','00001','1001',0,1,0,0,0.000000,0.000000,0.000000,0,now())
+				           on duplicate key update vedionum=vedionum + 0, audionum=audionum + 1,
+				           photonum=photonum + 0,biaozhunum=biaozhunum + 0, vediosize=vediosize + 0.000000, audiosize=audiosize + 0.000000,
+				           photosize=photosize + 0.000000, vediotime=vediotime + 0,creatime=now()].<br>﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿2017-05-29 02:00:01[INFO] host=[localhost], use=[root]lianjie chenggong.
+<p></p>2017-05-29 02:00:01[INFO] sql=[select t.hostcode, t.danwei, date(t.createdate) as date, t.filetype, count(*) as num, sum(t.filelen) as len, 
+        round(sum(t.playtime/1000)) as fitime, sum(t.is_flg) as fignum 
+        from zm_video_list t where t.uploaddate like '2017-05-28%' group by t.hostcode, t.danwei, date(t.createdate), t.filetype].
+<p></p><br><hr /><br>﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿2017-05-30 02:00:01[INFO] host=[localhost], use=[root]lianjie chenggong.
+<p></p>2017-05-30 02:00:01[INFO] sql=[select t.hostcode, t.danwei, date(t.createdate) as date, t.filetype, count(*) as num, sum(t.filelen) as len, 
+        round(sum(t.playtime/1000)) as fitime, sum(t.is_flg) as fignum 
+        from zm_video_list t where t.uploaddate like '2017-05-29%' group by t.hostcode, t.danwei, date(t.createdate), t.filetype].
+<p></p><br><hr /><br>﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿2017-05-31 02:00:01[INFO] host=[localhost], use=[root]lianjie chenggong.
+<p></p>2017-05-31 02:00:01[INFO] sql=[select t.hostcode, t.danwei, date(t.createdate) as date, t.filetype, count(*) as num, sum(t.filelen) as len, 
+        round(sum(t.playtime/1000)) as fitime, sum(t.is_flg) as fignum 
+        from zm_video_list t where t.uploaddate like '2017-05-30%' group by t.hostcode, t.danwei, date(t.createdate), t.filetype].
+<p></p><br><hr /><br>

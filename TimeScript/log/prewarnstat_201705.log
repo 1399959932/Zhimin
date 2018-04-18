@@ -1,0 +1,36 @@
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead in /var/www/html/TimeScript/prewarnstat.php on line 11
+PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead in /var/www/html/TimeScript/prewarnstat.php on line 11
+﻿[INFO] host=[localhost], use=[root]lianjie chenggong.
+[INFO] sql=[select t.hostcode, t.hostbody, t.danwei, date(t.createdate) as date, floor(sum(t.playtime/1000)) as filelen,
+        sum(IF(querys=0 and downloads=0 and opens=0, 1, 0)) as noopervedionum,
+        sum(IF((t.playtime/1000)<5, 1, 0)) as shortvedionum ,
+        count(1) as vediototalnum 
+        from zm_video_list t where t.uploaddate like '2017-05-27%' and t.filetype='MP4' group by t.hostcode, t.hostbody, t.danwei, date(t.createdate)].
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead in /var/www/html/TimeScript/prewarnstat.php on line 11
+PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead in /var/www/html/TimeScript/prewarnstat.php on line 11
+﻿[INFO] host=[localhost], use=[root]lianjie chenggong.
+[INFO] sql=[select t.hostcode, t.hostbody, t.danwei, date(t.createdate) as date, floor(sum(t.playtime/1000)) as filelen,
+        sum(IF(querys=0 and downloads=0 and opens=0, 1, 0)) as noopervedionum,
+        sum(IF((t.playtime/1000)<5, 1, 0)) as shortvedionum ,
+        count(1) as vediototalnum 
+        from zm_video_list t where t.uploaddate like '2017-05-28%' and t.filetype='MP4' group by t.hostcode, t.hostbody, t.danwei, date(t.createdate)].
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead in /var/www/html/TimeScript/prewarnstat.php on line 11
+PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead in /var/www/html/TimeScript/prewarnstat.php on line 11
+﻿[INFO] host=[localhost], use=[root]lianjie chenggong.
+[INFO] sql=[select t.hostcode, t.hostbody, t.danwei, date(t.createdate) as date, floor(sum(t.playtime/1000)) as filelen,
+        sum(IF(querys=0 and downloads=0 and opens=0, 1, 0)) as noopervedionum,
+        sum(IF((t.playtime/1000)<5, 1, 0)) as shortvedionum ,
+        count(1) as vediototalnum 
+        from zm_video_list t where t.uploaddate like '2017-05-29%' and t.filetype='MP4' group by t.hostcode, t.hostbody, t.danwei, date(t.createdate)].
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead in /var/www/html/TimeScript/prewarnstat.php on line 11
+PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Chongqing' for 'CST/8.0/no DST' instead in /var/www/html/TimeScript/prewarnstat.php on line 11
+﻿[INFO] host=[localhost], use=[root]lianjie chenggong.
+[INFO] sql=[select t.hostcode, t.hostbody, t.danwei, date(t.createdate) as date, floor(sum(t.playtime/1000)) as filelen,
+        sum(IF(querys=0 and downloads=0 and opens=0, 1, 0)) as noopervedionum,
+        sum(IF((t.playtime/1000)<5, 1, 0)) as shortvedionum ,
+        count(1) as vediototalnum 
+        from zm_video_list t where t.uploaddate like '2017-05-30%' and t.filetype='MP4' group by t.hostcode, t.hostbody, t.danwei, date(t.createdate)].

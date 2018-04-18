@@ -1,0 +1,29 @@
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿2017-05-28 02:30:01 [INFO] host=[localhost], use=[root]lianjie chenggong.
+2017-05-28 02:30:01[INFO] sql=[select t.hostcode, t.danwei, date(t.createdate) as date, t.hostbody, 
+		count(*) as num, round(sum(t.playtime/1000)) as fitime, 
+        sum(UNIX_TIMESTAMP(t.uploaddate)-UNIX_TIMESTAMP(t.createdate)>24*3600) as wannum 
+        from zm_video_list t where t.uploaddate like '2017-05-27%' group by t.hostcode, t.danwei, date(t.createdate), t.hostbody].
+<br><hr /><br>2017-05-28 02:30:01[INFO] sql_ins=[insert into zm_lowsupervise_stat(statdate,hostcode,unitcode,hostbody,
+									videototalnum, wanvideonum, videotimelength,creatime) 
+					           values('2017-05-27','00001','1001','123456',1,0,0.000000,now())
+					           on duplicate key update videototalnum=videototalnum + 1, 
+					           wanvideonum=wanvideonum + 0, videotimelength=videotimelength + 0.000000,creatime=now()].<br>﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿2017-05-29 02:30:01 [INFO] host=[localhost], use=[root]lianjie chenggong.
+2017-05-29 02:30:01[INFO] sql=[select t.hostcode, t.danwei, date(t.createdate) as date, t.hostbody, 
+		count(*) as num, round(sum(t.playtime/1000)) as fitime, 
+        sum(UNIX_TIMESTAMP(t.uploaddate)-UNIX_TIMESTAMP(t.createdate)>24*3600) as wannum 
+        from zm_video_list t where t.uploaddate like '2017-05-28%' group by t.hostcode, t.danwei, date(t.createdate), t.hostbody].
+<br><hr /><br>﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿2017-05-30 02:30:01 [INFO] host=[localhost], use=[root]lianjie chenggong.
+2017-05-30 02:30:01[INFO] sql=[select t.hostcode, t.danwei, date(t.createdate) as date, t.hostbody, 
+		count(*) as num, round(sum(t.playtime/1000)) as fitime, 
+        sum(UNIX_TIMESTAMP(t.uploaddate)-UNIX_TIMESTAMP(t.createdate)>24*3600) as wannum 
+        from zm_video_list t where t.uploaddate like '2017-05-29%' group by t.hostcode, t.danwei, date(t.createdate), t.hostbody].
+<br><hr /><br>﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿2017-05-31 02:30:01 [INFO] host=[localhost], use=[root]lianjie chenggong.
+2017-05-31 02:30:01[INFO] sql=[select t.hostcode, t.danwei, date(t.createdate) as date, t.hostbody, 
+		count(*) as num, round(sum(t.playtime/1000)) as fitime, 
+        sum(UNIX_TIMESTAMP(t.uploaddate)-UNIX_TIMESTAMP(t.createdate)>24*3600) as wannum 
+        from zm_video_list t where t.uploaddate like '2017-05-30%' group by t.hostcode, t.danwei, date(t.createdate), t.hostbody].
+<br><hr /><br>

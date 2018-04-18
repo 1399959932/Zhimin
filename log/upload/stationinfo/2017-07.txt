@@ -1,0 +1,21 @@
+2017-07-16 10:19:48[INFO] =error[用户没传入任何值].
+2017-07-16 10:19:48[INFO] =error[执法数据采集设备产品编码为空].
+2017-07-16 10:19:48[INFO] =error[上传失败].
+2017-07-16 10:19:53[INFO] =success[用户传入：执法数据采集设备产品编码（WIN-02RMRRIUV6G）].
+2017-07-16 10:19:53[INFO] =success[update `zm_hostip` set `hostname`='WIN-02RMRRIUV6G',`hostip`='',`online`='',`enable`='',`source_type`='1',`modtime`='2017-07-16 10:19:53' where `hostname`='WIN-02RMRRIUV6G'].
+2017-07-16 10:19:53[INFO] =success[上传成功].
+2017-07-16 10:23:32[INFO] =success[用户传入：执法数据采集设备产品编码（WIN-02RMRRIUV6G），在线状态（1）].
+2017-07-16 10:23:32[INFO] =success[update `zm_hostip` set `hostname`='WIN-02RMRRIUV6G',`hostip`='',`online`='1',`enable`='',`source_type`='1',`modtime`='2017-07-16 10:23:32' where `hostname`='WIN-02RMRRIUV6G'].
+2017-07-16 10:23:32[INFO] =success[上传成功].
+2017-07-16 10:30:43[INFO] =success[用户传入：执法数据采集设备产品编码（WIN-02RMRRIUV6G），在线状态（1），启用状态（1）].
+2017-07-16 10:30:43[INFO] =success[update `zm_hostip` set `hostname`='WIN-02RMRRIUV6G',`hostip`='',`online`='1',`enable`='1',`source_type`='1',`modtime`='2017-07-16 10:30:43' where `hostname`='WIN-02RMRRIUV6G'].
+2017-07-16 10:30:43[INFO] =success[上传成功].
+2017-07-16 10:30:55[INFO] =success[用户传入：执法数据采集设备产品编码（WIN-02RMRRIUV6G），启用状态（1）].
+2017-07-16 10:30:55[INFO] =success[update `zm_hostip` set `hostname`='WIN-02RMRRIUV6G',`hostip`='',`online`='0',`enable`='1',`source_type`='1',`modtime`='2017-07-16 10:30:55' where `hostname`='WIN-02RMRRIUV6G'].
+2017-07-16 10:30:55[INFO] =success[上传成功].
+2017-07-16 10:31:02[INFO] =success[用户传入：执法数据采集设备产品编码（WIN-02RMRRIUV6G），在线状态（1）].
+2017-07-16 10:31:02[INFO] =success[update `zm_hostip` set `hostname`='WIN-02RMRRIUV6G',`hostip`='',`online`='1',`enable`='0',`source_type`='1',`modtime`='2017-07-16 10:31:02' where `hostname`='WIN-02RMRRIUV6G'].
+2017-07-16 10:31:02[INFO] =success[上传成功].
+2017-07-16 10:31:09[INFO] =success[用户传入：执法数据采集设备产品编码（WIN-02RMRRIUV6G），在线状态（1），启用状态（1）].
+2017-07-16 10:31:09[INFO] =success[update `zm_hostip` set `hostname`='WIN-02RMRRIUV6G',`hostip`='',`online`='1',`enable`='1',`source_type`='1',`modtime`='2017-07-16 10:31:09' where `hostname`='WIN-02RMRRIUV6G'].
+2017-07-16 10:31:09[INFO] =success[上传成功].

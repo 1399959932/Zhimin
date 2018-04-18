@@ -1,0 +1,32 @@
+2017-07-12 14:08:34[INFO] =error[用户没查询任何值].
+2017-07-12 14:08:34[INFO] =error[执法数据采集设备产品编码为空].
+2017-07-12 14:08:34[INFO] =success[SELECT * from `zm_hostip` where 0 AND '1'='0'].
+2017-07-12 14:08:34[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-12 14:08:40[INFO] =success[用户查询：执法数据采集设备产品编码（1111）].
+2017-07-12 14:08:40[INFO] =success[SELECT * from `zm_hostip` where 1 AND `hostname`='1111'].
+2017-07-12 14:08:40[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-12 14:09:31[INFO] =success[用户查询：执法数据采集设备产品编码（刘云田）].
+2017-07-12 14:09:31[INFO] =success[SELECT * from `zm_hostip` where 1 AND `hostname`='刘云田'].
+2017-07-12 14:09:31[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-12 14:10:49[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC）].
+2017-07-12 14:10:49[INFO] =success[SELECT * from `zm_hostip` where 1 AND `hostname`='zm-PC'].
+2017-07-12 14:10:49[INFO] =success[查询成功！].
+2017-07-12 14:12:30[INFO] =success[用户查询：执法数据采集设备产品编码（zm-PC1）].
+2017-07-12 14:12:30[INFO] =success[SELECT * from `zm_hostip` where 1 AND `hostname`='zm-PC1'].
+2017-07-12 14:12:30[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-15 23:11:03[INFO] =success[用户查询：执法数据采集设备产品编码（USER-20170418SV）].
+2017-07-15 23:11:03[INFO] =success[SELECT * from `zm_hostip` where 1 AND `hostname`='USER-20170418SV'].
+2017-07-15 23:11:03[INFO] =success[查询成功！].
+2017-07-15 23:11:39[INFO] =success[用户查询：执法数据采集设备产品编码（USER-20170418SV）].
+2017-07-15 23:11:39[INFO] =success[SELECT * from `zm_hostip` where 1 AND `hostname`='USER-20170418SV'].
+2017-07-15 23:11:39[INFO] =success[查询成功！].
+2017-07-15 23:11:47[INFO] =success[用户查询：执法数据采集设备产品编码（WIN-02RMRRIUV6G1）].
+2017-07-15 23:11:47[INFO] =success[SELECT * from `zm_hostip` where 1 AND `hostname`='WIN-02RMRRIUV6G1'].
+2017-07-15 23:11:47[INFO] =error[查询失败！输入的内容有误查询不到结果！].
+2017-07-15 23:11:50[INFO] =success[用户查询：执法数据采集设备产品编码（WIN-02RMRRIUV6G）].
+2017-07-15 23:11:50[INFO] =success[SELECT * from `zm_hostip` where 1 AND `hostname`='WIN-02RMRRIUV6G'].
+2017-07-15 23:11:50[INFO] =success[查询成功！].
+2017-07-16 09:43:30[INFO] =error[用户没查询任何值].
+2017-07-16 09:43:30[INFO] =error[执法数据采集设备产品编码为空].
+2017-07-16 09:43:30[INFO] =success[SELECT * from `zm_hostip` where 0 AND '1'='0'].
+2017-07-16 09:43:30[INFO] =error[查询失败！输入的内容有误查询不到结果！].

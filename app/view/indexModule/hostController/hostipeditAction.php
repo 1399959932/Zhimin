@@ -1,0 +1,50 @@
+<?php
+
+echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\r\n" . '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">' . "\r\n" . '<head>' . "\r\n" . '    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">' . "\r\n" . '    <title>工作站编辑</title>' . "\r\n" . '    <script type="text/javascript" src="';
+echo Zhimin::g('assets_uri');
+echo 'js/jquery.min.js"></script>' . "\r\n" . '    <script type="text/javascript" src="';
+echo Zhimin::g('assets_uri');
+echo 'js/laydate/laydate.js"></script>' . "\r\n" . '    <script type="text/javascript" src="';
+echo Zhimin::g('assets_uri');
+echo 'js/layer/layer.js"></script>' . "\r\n" . '    <script type="text/javascript" src="';
+echo Zhimin::g('assets_uri');
+echo 'js/global.js"></script>' . "\r\n" . '    <script type="text/javascript" src="';
+echo Zhimin::g('assets_uri');
+echo 'js/hostip.js"></script>' . "\r\n" . '    <link rel="stylesheet" type="text/css" href="';
+echo Zhimin::g('assets_uri');
+echo 'style/reset.css" />' . "\r\n" . '    <link rel="stylesheet" type="text/css" href="';
+echo Zhimin::g('assets_uri');
+echo 'style/global.css" />' . "\r\n" . '    <style type="text/css">' . "\r\n" . '        .table_detail tbody td{*border-right:none;}' . "\r\n" . '    </style>' . "\r\n" . '    <!--[if IE 7]>' . "\r\n" . '<style>' . "\r\n" . '.notice_top .close{position: absolute;top:18px;right:18px;float: right;margin-right:0; margin-top:0;display: inline-block;}' . "\r\n" . '.atten_top .close{line-height: normal;}' . "\r\n" . '</style>' . "\r\n" . '<![endif]-->' . "\r\n" . '<body>' . "\r\n" . '<div class="layer_iframe1 atten_edit">' . "\r\n" . '    <div class="iframe_top1">修改<span class="close1 close_btn"><img src="./images/close.png" alt="" /></span></div>' . "\r\n" . '    <div class="iframe_body1">' . "\r\n" . '        <form action="';
+echo Zhimin::buildUrl();
+echo '&action=edit" method="post" name="hostip_edit_form" id="hostip_edit_form">' . "\r\n" . '            <div class="con_atten_wrap recorder_notice">' . "\r\n" . '                <div class="condition_top">' . "\r\n" . '                    <div class="condition_345 condition_s">' . "\r\n" . '                        <span class="condition_title">名称：</span>' . "\r\n" . '                        <font class="sign_d sign_star1">*</font>' . "\r\n" . '                        <div class="select_260 select_div select_relative select_in selec_text">' . "\r\n" . '                            ';
+echo $data['hostname'];
+echo '                        </div>' . "\r\n" . '                    </div>' . "\r\n" . '                    <div class="clear"></div>' . "\r\n" . '                </div>' . "\r\n" . '                <div class="condition_top">' . "\r\n" . '                    <div class="condition_345 condition_s">' . "\r\n" . '                        <span class="condition_title">单位：</span>' . "\r\n" . '                        <font class="sign_d sign_star">*</font>' . "\r\n" . '                        <div class="select_260 select_div">' . "\r\n" . '                            <div class="select_238 sele_c">' . "\r\n" . '                                ';
+
+if (empty($data['unitcode'])) {
+	echo '                                    <p class="term">-请选择-</p>' . "\r\n" . '                                    <input type="hidden" name="danwei" value="" />' . "\r\n" . '                                ';
+}
+else {
+	echo '                                    <p class="term">';
+	echo $data['unit_name'];
+	echo '</p>' . "\r\n" . '                                    <input type="hidden" name="danwei" value="';
+	echo $data['unitcode'];
+	echo '" />' . "\r\n" . '                                ';
+}
+
+echo '                                <ul class="ul_band">' . "\r\n" . '                                    ';
+$optionsStr = '';
+HTMLUtils::options_stair_unitsearch($optionsStr, $units_array, 'bh', 'name', 'child');
+echo $optionsStr;
+echo '                            </div>' . "\r\n" . '                            <div class="select_button"></div>' . "\r\n" . '                        </div>' . "\r\n" . '                    </div>' . "\r\n" . '                    <div class="clear"></div>' . "\r\n" . '                </div>' . "\r\n" . '                <div class="condition_top">' . "\r\n" . '                    <div class="condition_345 condition_s">' . "\r\n" . '                        <span class="condition_title">IP地址：</span>' . "\r\n" . '                        <font class="sign_d sign_star">*</font>' . "\r\n" . '                        <div class="select_260 select_div select_relative select_in">' . "\r\n" . '                            <input type="text" name="hostip" value="';
+echo $data['hostip'];
+echo '" />' . "\r\n" . '                            <span class="error_msg">请填写主机地址</span>' . "\r\n" . '                        </div>' . "\r\n" . '                    </div>' . "\r\n" . '                    <div class="clear"></div>' . "\r\n" . '                </div>' . "\r\n" . '                <div class="condition_top">' . "\r\n" . '                    <div class="condition_345 condition_s">' . "\r\n" . '                        <span class="condition_title">负责人：</span>' . "\r\n" . '                        <font class="sign_d sign_star1">*</font>' . "\r\n" . '                        <div class="select_260 select_div select_in">' . "\r\n" . '                            <input type="text" name="contact" value="';
+echo $data['contact'];
+echo '" />' . "\r\n" . '                        </div>' . "\r\n" . '                    </div>' . "\r\n" . '                    <div class="clear"></div>' . "\r\n" . '                </div>' . "\r\n" . '                <div class="condition_top">' . "\r\n" . '                    <div class="condition_345 condition_s">' . "\r\n" . '                        <span class="condition_title">联系电话：</span>' . "\r\n" . '                        <font class="sign_d sign_star1">*</font>' . "\r\n" . '                        <div class="select_260 select_div select_in">' . "\r\n" . '                            <input type="text" name="telephone" value="';
+echo $data['telephone'];
+echo '" />' . "\r\n" . '                        </div>' . "\r\n" . '                    </div>' . "\r\n" . '                    <div class="clear"></div>' . "\r\n" . '                </div>' . "\r\n" . '                <div class="condition_top">' . "\r\n" . '                    <div class="condition_345 condition_s">' . "\r\n" . '                        <span class="condition_title">工作站地址：</span>' . "\r\n" . '                        <font class="sign_d sign_star1">*</font>' . "\r\n" . '                        <div class="select_260 select_div select_in">' . "\r\n" . '                            <input type="text" name="address" value="';
+echo $data['address'];
+echo '" />' . "\r\n" . '                        </div>' . "\r\n" . '                    </div>' . "\r\n" . '                    <div class="clear"></div>' . "\r\n" . '                </div>' . "\r\n" . '                <div class="condition_top">' . "\r\n" . '                    <div class="condition_346 condition_s condition_textarea condition_height">' . "\r\n" . '                        <span class="condition_title">备注：</span>' . "\r\n" . '                        <font class="sign_d sign_star1">*</font>' . "\r\n" . '                        <div class="select_260 select_div select_days textarea_in">' . "\r\n" . '                            <textarea name="memo">';
+echo $data['memo'];
+echo '</textarea>' . "\r\n" . '                        </div>' . "\r\n" . '                    </div>' . "\r\n" . '                    <div class="clear"></div>' . "\r\n" . '                </div>' . "\r\n" . '                <div class="condition_top">' . "\r\n" . '                    <div class="condition_345 condition_s ">' . "\r\n" . '                        <font class="sign_d sign_star1">*</font>' . "\r\n" . '                        <div class="select_260 select_div select_in selec_text">' . "\r\n" . '                            <span class="sure_add" id="add_submit">确 定</span>' . "\r\n" . '                            <span class="sure_cancle close_btn">取 消</span>' . "\r\n" . '                        </div>' . "\r\n" . '                    </div>' . "\r\n" . '                    <div class="clear"></div>' . "\r\n" . '                </div>' . "\r\n" . '            </div>' . "\r\n" . '        </form>' . "\r\n" . '    </div>' . "\r\n" . '    <div class="iframe_foot1"></div>' . "\r\n" . '</div>' . "\r\n" . '<!-- 成功提示框 -->' . "\r\n" . '<div class="layer_notice lay_success">' . "\r\n" . '    <div class="notice_top"><span class="close close_btn"><img src="./images/close.png" alt="" /></span></div>' . "\r\n" . '    <div class="notice_body">' . "\r\n" . '        <div class="n_left">' . "\r\n" . '            <img src="./images/success_bg.png">' . "\r\n" . '        </div>' . "\r\n" . '        <div class="n_right">' . "\r\n" . '            <p id="success_flg">修改成功......<font>3</font>秒钟后返回页面！</p>' . "\r\n" . '            <div class="clear"></div>' . "\r\n" . '            <span class="cancle_span close_btn">确 定</span>' . "\r\n" . '        </div>' . "\r\n" . '    </div>' . "\r\n" . '    <div class="notice_foot"></div>' . "\r\n" . '</div>' . "\r\n" . '<!-- 失败提示框 -->' . "\r\n" . '<div class="layer_notice lay_wrong">' . "\r\n" . '    <div class="notice_top"><span class="close close_btn"><img src="./images/close.png" alt="" /></span></div>' . "\r\n" . '    <div class="notice_body">' . "\r\n" . '        <div class="n_left">' . "\r\n" . '            <img src="./images/notice_bg.png">' . "\r\n" . '        </div>' . "\r\n" . '        <div class="n_right">' . "\r\n" . '            <p id="fail_flg">修改失败......<font>3</font>秒钟后返回页面！</p>' . "\r\n" . '            <div class="clear"></div>' . "\r\n" . '            <span class="cancle_span close_btn_self">确 定</span>' . "\r\n" . '        </div>' . "\r\n" . '    </div>' . "\r\n" . '    <div class="notice_foot"></div>' . "\r\n" . '</div>' . "\r\n" . '' . "\r\n" . '</body>' . "\r\n" . '</html>';
+
+?>

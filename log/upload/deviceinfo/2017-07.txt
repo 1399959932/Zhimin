@@ -1,0 +1,34 @@
+2017-07-12 18:20:52[INFO] =error[用户没传入任何值].
+2017-07-12 18:20:52[INFO] =error[文件编号为空].
+2017-07-12 18:20:52[INFO] =error[编号为空].
+2017-07-12 18:20:52[INFO] =error[产品序号为空].
+2017-07-12 18:20:52[INFO] =error[上传失败].
+2017-07-16 09:49:57[INFO] =error[用户没传入任何值].
+2017-07-16 09:49:57[INFO] =error[文件编号为空].
+2017-07-16 09:49:57[INFO] =error[编号为空].
+2017-07-16 09:49:57[INFO] =error[产品序号为空].
+2017-07-16 09:49:57[INFO] =error[上传失败].
+2017-07-16 09:50:11[INFO] =error[用户没传入任何值].
+2017-07-16 09:50:11[INFO] =error[文件编号为空].
+2017-07-16 09:50:11[INFO] =error[编号为空].
+2017-07-16 09:50:11[INFO] =error[产品序号为空].
+2017-07-16 09:50:11[INFO] =error[上传失败].
+2017-07-16 09:50:57[INFO] =error[用户没传入任何值].
+2017-07-16 09:50:57[INFO] =error[文件编号为空].
+2017-07-16 09:50:57[INFO] =error[产品序号为空].
+2017-07-16 09:50:57[INFO] =error[上传失败].
+2017-07-16 09:54:01[INFO] =success[用户传入：文件编号（00001@201401160035020000），产品序号（00001）].
+2017-07-16 09:54:01[INFO] =success[update `zm_video_list` set `filename`='00001@201401160035020000',`bfilename`='',`createdate`='',`filelen`='0',`filetype`='',`hostname`='',`hostcode`='',`hostbody`='00001',`danwei`='',`serverurl`='',`saveposition`='',`media_play_url`='',`macposition`='',`creater`='',`uploaddate`='',`caserank`='',`source_type`='1' where `filename`='00001@201401160035020000'].
+2017-07-16 09:54:01[INFO] =success[上传成功].
+2017-07-16 09:54:39[INFO] =success[用户传入：文件编号（00001@201401160035020000），产品序号（00001111）].
+2017-07-16 09:54:39[INFO] =error[记录仪编号不存在].
+2017-07-16 09:54:39[INFO] =error[上传失败].
+2017-07-16 09:55:06[INFO] =success[用户传入：文件编号（00001@201401160035020000），产品序号（00001111）].
+2017-07-16 09:55:06[INFO] =error[记录仪编号不存在].
+2017-07-16 09:55:06[INFO] =error[上传失败].
+2017-07-16 09:56:43[INFO] =success[用户传入：文件编号（00001@201401160035020000），产品序号（00001）].
+2017-07-16 09:56:43[INFO] =success[update `zm_video_list` set `filename`='00001@201401160035020000',`bfilename`='',`createdate`='',`filelen`='0',`filetype`='',`hostname`='',`hostcode`='',`hostbody`='00001',`danwei`='',`serverurl`='',`saveposition`='',`media_play_url`='',`macposition`='',`creater`='',`uploaddate`='',`caserank`='',`source_type`='1' where `filename`='00001@201401160035020000'].
+2017-07-16 09:56:43[INFO] =success[上传成功].
+2017-07-16 09:57:21[INFO] =success[用户传入：文件编号（00001@201401160035030000），产品序号（00001）].
+2017-07-16 09:57:21[INFO] =success[insert into `zm_video_list` set `filename`='00001@201401160035030000',`bfilename`='',`createdate`='',`filelen`='0',`filetype`='',`hostname`='',`hostcode`='',`hostbody`='00001',`danwei`='',`serverurl`='',`saveposition`='',`media_play_url`='',`macposition`='',`creater`='',`uploaddate`='',`caserank`='',`source_type`='1'].
+2017-07-16 09:57:21[INFO] =success[上传成功].

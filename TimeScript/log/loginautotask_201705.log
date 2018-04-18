@@ -1,0 +1,84 @@
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿1、2017-05-28 01:30:01 [INFO] start clear log data.
+<br><br>2、2017-05-28 01:30:01 [INFO] sql_log_del=[delete from zm_log where logtime < 1480354201].
+<br><br>3、2017-05-28 01:30:01 [INFO] sql_device_del=[delete from zm_device_log where logtime < ADDDATE(NOW(),-180)].
+<br><br>4、2017-05-28 01:30:01 [INFO] sql_station_del=[delete from zm_station_log where logtime < ADDDATE(NOW(),-180)].
+<br><br>5、2017-05-28 01:30:01 [INFO] media_del=[INSERT INTO `zm_video_list_del` SELECT * FROM `zm_video_list` where (sort='' or sort is NULL) and onlyread=0 and DATEDIFF('2017-05-28 01:30:01',uploaddate) > 180].
+<br><br>6、2017-05-28 01:30:01 [INFO] media_del=[DELETE FROM zm_video_list WHERE (sort='' or sort is NULL) and onlyread=0 and DATEDIFF('2017-05-28 01:30:01',uploaddate) > 180].
+<br><br>9、2017-05-28 01:30:01 [INFO] END clear log data.
+<br><br><hr />10、删除“存储天数”达到指定值的媒体记录和文件
+<br><br><hr /><br />11、2017-05-28 01:30:01 [INFO] start stat data and send mail.
+<br><br>11-1、2017-05-28 01:30:01 [INFO] mail content is : <br><table width="98%"  border="1" cellpadding="1" cellspacing="1">
+<tr bgcolor="#3366FF"><td width="10%" align="center">序号</td><td width="40%" align="center">文件类型</td><td width="25%" align="center">文件数量</td><td width="25%" align="center">文件大小</td>  </tr>
+<tr class="bg"><td align="center">1</td><td align="center"></td><td align="center">1</td><td align="center">0 MB</td></tr>
+<tr class="bg"><td align="center">2</td><td align="center">JPG</td><td align="center">7</td><td align="center">7.81 MB</td></tr>
+<tr class="bg"><td align="center">3</td><td align="center">MP4</td><td align="center">53</td><td align="center">14.98 GB</td></tr>
+<tr class="bg"><td align="center">4</td><td align="center">WAV</td><td align="center">11</td><td align="center">133.16 MB</td></tr>
+<tr class="bg"><td align="center"></td><td align="center">统计时间:2017-05-28 01:30:01</td><td align="center">总媒体文件数量:72个</td><td align="center">总占用空间:15.12 GB</td></tr></table>
+<br>&nbsp;&nbsp;存储空间剩余容量:253.48 GB
+<hr /><br><br>PHP Notice:  Undefined offset: 1 in /var/www/html/TimeScript/PhpMailer.php on line 57
+PHP Warning:  require(PHPMailerAutoload.php): failed to open stream: No such file or directory in /var/www/html/app/core/PHPMailer.php on line 575
+PHP Fatal error:  require(): Failed opening required 'PHPMailerAutoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/app/core/PHPMailer.php on line 575
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿1、2017-05-29 01:30:01 [INFO] start clear log data.
+<br><br>2、2017-05-29 01:30:01 [INFO] sql_log_del=[delete from zm_log where logtime < 1480440601].
+<br><br>3、2017-05-29 01:30:01 [INFO] sql_device_del=[delete from zm_device_log where logtime < ADDDATE(NOW(),-180)].
+<br><br>4、2017-05-29 01:30:01 [INFO] sql_station_del=[delete from zm_station_log where logtime < ADDDATE(NOW(),-180)].
+<br><br>5、2017-05-29 01:30:01 [INFO] media_del=[INSERT INTO `zm_video_list_del` SELECT * FROM `zm_video_list` where (sort='' or sort is NULL) and onlyread=0 and DATEDIFF('2017-05-29 01:30:01',uploaddate) > 180].
+<br><br>6、2017-05-29 01:30:01 [INFO] media_del=[DELETE FROM zm_video_list WHERE (sort='' or sort is NULL) and onlyread=0 and DATEDIFF('2017-05-29 01:30:01',uploaddate) > 180].
+<br><br>9、2017-05-29 01:30:01 [INFO] END clear log data.
+<br><br><hr />10、删除“存储天数”达到指定值的媒体记录和文件
+<br><br><hr /><br />11、2017-05-29 01:30:01 [INFO] start stat data and send mail.
+<br><br>11-1、2017-05-29 01:30:01 [INFO] mail content is : <br><table width="98%"  border="1" cellpadding="1" cellspacing="1">
+<tr bgcolor="#3366FF"><td width="10%" align="center">序号</td><td width="40%" align="center">文件类型</td><td width="25%" align="center">文件数量</td><td width="25%" align="center">文件大小</td>  </tr>
+<tr class="bg"><td align="center">1</td><td align="center"></td><td align="center">1</td><td align="center">0 MB</td></tr>
+<tr class="bg"><td align="center">2</td><td align="center">JPG</td><td align="center">7</td><td align="center">7.81 MB</td></tr>
+<tr class="bg"><td align="center">3</td><td align="center">MP4</td><td align="center">53</td><td align="center">14.98 GB</td></tr>
+<tr class="bg"><td align="center">4</td><td align="center">WAV</td><td align="center">11</td><td align="center">133.16 MB</td></tr>
+<tr class="bg"><td align="center"></td><td align="center">统计时间:2017-05-29 01:30:01</td><td align="center">总媒体文件数量:72个</td><td align="center">总占用空间:15.12 GB</td></tr></table>
+<br>&nbsp;&nbsp;存储空间剩余容量:253.48 GB
+<hr /><br><br>PHP Notice:  Undefined offset: 1 in /var/www/html/TimeScript/PhpMailer.php on line 57
+PHP Warning:  require(PHPMailerAutoload.php): failed to open stream: No such file or directory in /var/www/html/app/core/PHPMailer.php on line 575
+PHP Fatal error:  require(): Failed opening required 'PHPMailerAutoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/app/core/PHPMailer.php on line 575
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿1、2017-05-30 01:30:01 [INFO] start clear log data.
+<br><br>2、2017-05-30 01:30:01 [INFO] sql_log_del=[delete from zm_log where logtime < 1480527001].
+<br><br>3、2017-05-30 01:30:01 [INFO] sql_device_del=[delete from zm_device_log where logtime < ADDDATE(NOW(),-180)].
+<br><br>4、2017-05-30 01:30:01 [INFO] sql_station_del=[delete from zm_station_log where logtime < ADDDATE(NOW(),-180)].
+<br><br>5、2017-05-30 01:30:01 [INFO] media_del=[INSERT INTO `zm_video_list_del` SELECT * FROM `zm_video_list` where (sort='' or sort is NULL) and onlyread=0 and DATEDIFF('2017-05-30 01:30:01',uploaddate) > 180].
+<br><br>6、2017-05-30 01:30:01 [INFO] media_del=[DELETE FROM zm_video_list WHERE (sort='' or sort is NULL) and onlyread=0 and DATEDIFF('2017-05-30 01:30:01',uploaddate) > 180].
+<br><br>9、2017-05-30 01:30:01 [INFO] END clear log data.
+<br><br><hr />10、删除“存储天数”达到指定值的媒体记录和文件
+<br><br><hr /><br />11、2017-05-30 01:30:01 [INFO] start stat data and send mail.
+<br><br>11-1、2017-05-30 01:30:01 [INFO] mail content is : <br><table width="98%"  border="1" cellpadding="1" cellspacing="1">
+<tr bgcolor="#3366FF"><td width="10%" align="center">序号</td><td width="40%" align="center">文件类型</td><td width="25%" align="center">文件数量</td><td width="25%" align="center">文件大小</td>  </tr>
+<tr class="bg"><td align="center">1</td><td align="center"></td><td align="center">1</td><td align="center">0 MB</td></tr>
+<tr class="bg"><td align="center">2</td><td align="center">JPG</td><td align="center">7</td><td align="center">7.81 MB</td></tr>
+<tr class="bg"><td align="center">3</td><td align="center">MP4</td><td align="center">53</td><td align="center">14.98 GB</td></tr>
+<tr class="bg"><td align="center">4</td><td align="center">WAV</td><td align="center">11</td><td align="center">133.16 MB</td></tr>
+<tr class="bg"><td align="center"></td><td align="center">统计时间:2017-05-30 01:30:01</td><td align="center">总媒体文件数量:72个</td><td align="center">总占用空间:15.12 GB</td></tr></table>
+<br>&nbsp;&nbsp;存储空间剩余容量:253.48 GB
+<hr /><br><br>PHP Notice:  Undefined offset: 1 in /var/www/html/TimeScript/PhpMailer.php on line 57
+PHP Warning:  require(PHPMailerAutoload.php): failed to open stream: No such file or directory in /var/www/html/app/core/PHPMailer.php on line 575
+PHP Fatal error:  require(): Failed opening required 'PHPMailerAutoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/app/core/PHPMailer.php on line 575
+﻿PHP Notice:  Undefined index: HTTP_HOST in /var/www/html/app/config/main.php on line 11
+﻿1、2017-05-31 01:30:01 [INFO] start clear log data.
+<br><br>2、2017-05-31 01:30:01 [INFO] sql_log_del=[delete from zm_log where logtime < 1480613401].
+<br><br>3、2017-05-31 01:30:01 [INFO] sql_device_del=[delete from zm_device_log where logtime < ADDDATE(NOW(),-180)].
+<br><br>4、2017-05-31 01:30:01 [INFO] sql_station_del=[delete from zm_station_log where logtime < ADDDATE(NOW(),-180)].
+<br><br>5、2017-05-31 01:30:01 [INFO] media_del=[INSERT INTO `zm_video_list_del` SELECT * FROM `zm_video_list` where (sort='' or sort is NULL) and onlyread=0 and DATEDIFF('2017-05-31 01:30:01',uploaddate) > 180].
+<br><br>6、2017-05-31 01:30:01 [INFO] media_del=[DELETE FROM zm_video_list WHERE (sort='' or sort is NULL) and onlyread=0 and DATEDIFF('2017-05-31 01:30:01',uploaddate) > 180].
+<br><br>9、2017-05-31 01:30:01 [INFO] END clear log data.
+<br><br><hr />10、删除“存储天数”达到指定值的媒体记录和文件
+<br><br><hr /><br />11、2017-05-31 01:30:01 [INFO] start stat data and send mail.
+<br><br>11-1、2017-05-31 01:30:01 [INFO] mail content is : <br><table width="98%"  border="1" cellpadding="1" cellspacing="1">
+<tr bgcolor="#3366FF"><td width="10%" align="center">序号</td><td width="40%" align="center">文件类型</td><td width="25%" align="center">文件数量</td><td width="25%" align="center">文件大小</td>  </tr>
+<tr class="bg"><td align="center">1</td><td align="center"></td><td align="center">1</td><td align="center">0 MB</td></tr>
+<tr class="bg"><td align="center">2</td><td align="center">JPG</td><td align="center">7</td><td align="center">7.81 MB</td></tr>
+<tr class="bg"><td align="center">3</td><td align="center">MP4</td><td align="center">53</td><td align="center">14.98 GB</td></tr>
+<tr class="bg"><td align="center">4</td><td align="center">WAV</td><td align="center">11</td><td align="center">133.16 MB</td></tr>
+<tr class="bg"><td align="center"></td><td align="center">统计时间:2017-05-31 01:30:01</td><td align="center">总媒体文件数量:72个</td><td align="center">总占用空间:15.12 GB</td></tr></table>
+<br>&nbsp;&nbsp;存储空间剩余容量:253.48 GB
+<hr /><br><br>PHP Notice:  Undefined offset: 1 in /var/www/html/TimeScript/PhpMailer.php on line 57
+PHP Warning:  require(PHPMailerAutoload.php): failed to open stream: No such file or directory in /var/www/html/app/core/PHPMailer.php on line 575
+PHP Fatal error:  require(): Failed opening required 'PHPMailerAutoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/html/app/core/PHPMailer.php on line 575
