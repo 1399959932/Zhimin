@@ -1,76 +1,169 @@
-<?php
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>	
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">	
+<title>公告管理
+</title>		
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>js/jquery.min.js">
+</script>	
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>js/laydate/laydate.js">
+</script>	
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>js/layer/layer.js">
+</script>	
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>js/global.js">
+</script>	
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>js/announce.js">
+</script>	
+<link rel="stylesheet" type="text/css" href="<?php Zhimin::g('assets_uri');?>style/reset.css" />	
+<link rel="stylesheet" type="text/css" href="<?php Zhimin::g('assets_uri');?>style/global.css" />	
+<link rel="stylesheet" type="text/css" href="<?php Zhimin::g('assets_uri');?>js/themes/default/easyui.css">	
+<link rel="stylesheet" type="text/css" href="<?php Zhimin::g('assets_uri');?>js/themes/icon.css">	
+<link rel="stylesheet" type="text/css" href="<?php Zhimin::g('assets_uri');?>style/re_easyui.css">	
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>js/jquery.easyui.min.js">
+</script> 	
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>tools/ueditor/ueditor.config.js">
+</script>	
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>tools/ueditor/ueditor.all.min.js">
+</script>	
+<script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>tools/ueditor/lang/zh-cn/zh-cn.js">
+</script>	
+<style>		.condition_textarea .textarea_in textarea{*height: 79px;}	
+</style>	
+<!--[if IE 7]>
+<style>.notice_top .close{position: absolute;top:18px;right:18px;float: right;margin-right:0; margin-top:0;display: inline-block;}.atten_top .close{line-height: normal;}
+</style>
+<![endif]-->
+</head>
+<body class="main_body">	
+	<div class="detail">		
+<?php include_once ('menu.php');?>
+				
+<div class="detail_top">			
+	<img src="./images/main_detail_tbg.png" width="100%" alt="" />		
+</div>		
+<div class="detail_body">			
+	<div class="tabel_box surpervision">				
+	<form action="<?php echo Zhimin::buildUrl();?>&action=search" method="post">					
+<div class="condition_top">						
+	<div class="condition_240 condition_s">							
+	<span class="condition_title">单位：
+	</span>							
+<div class="select_200 select_div">								
+	<input class="easyui-combotree" name="danwei" data-options="" style="width:100%;" id="easyui_search"/>							
+</div>						
+</div>						
+<div class="condition_175 condition_s">							
+	<span class="condition_title">时间范围：
+	</span>							
+<div class="select_112 select_div">								
+	<select class="easy_se" name="date_time" style="width:100%;">									
+	<option value="1" 
 
-echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\r\n" . '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">' . "\r\n" . '<head>' . "\r\n" . '	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">' . "\r\n" . '	<title>公告管理</title>	' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'js/jquery.min.js"></script>' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'js/laydate/laydate.js"></script>' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'js/layer/layer.js"></script>' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'js/global.js"></script>' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'js/announce.js"></script>' . "\r\n" . '	<link rel="stylesheet" type="text/css" href="';
-echo Zhimin::g('assets_uri');
-echo 'style/reset.css" />' . "\r\n" . '	<link rel="stylesheet" type="text/css" href="';
-echo Zhimin::g('assets_uri');
-echo 'style/global.css" />' . "\r\n" . '	<link rel="stylesheet" type="text/css" href="';
-echo Zhimin::g('assets_uri');
-echo 'js/themes/default/easyui.css">' . "\r\n" . '	<link rel="stylesheet" type="text/css" href="';
-echo Zhimin::g('assets_uri');
-echo 'js/themes/icon.css">' . "\r\n" . '	<link rel="stylesheet" type="text/css" href="';
-echo Zhimin::g('assets_uri');
-echo 'style/re_easyui.css">' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'js/jquery.easyui.min.js"></script> ' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'tools/ueditor/ueditor.config.js"></script>' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'tools/ueditor/ueditor.all.min.js"></script>' . "\r\n" . '	<script type="text/javascript" src="';
-echo Zhimin::g('assets_uri');
-echo 'tools/ueditor/lang/zh-cn/zh-cn.js"></script>' . "\r\n" . '	<style>' . "\r\n" . '		.condition_textarea .textarea_in textarea{*height: 79px;}' . "\r\n" . '	</style>' . "\r\n" . '	<!--[if IE 7]>' . "\r\n" . '<style>' . "\r\n" . '.notice_top .close{position: absolute;top:18px;right:18px;float: right;margin-right:0; margin-top:0;display: inline-block;}' . "\r\n" . '.atten_top .close{line-height: normal;}' . "\r\n" . '</style>' . "\r\n" . '<![endif]-->' . "\r\n" . '</head>' . "\r\n" . '<body class="main_body">' . "\r\n" . '	<div class="detail">' . "\r\n" . '		';
-include_once ('menu.php');
-echo '		' . "\r\n" . '		<div class="detail_top">' . "\r\n" . '			<img src="./images/main_detail_tbg.png" width="100%" alt="" />' . "\r\n" . '		</div>' . "\r\n" . '		<div class="detail_body">' . "\r\n" . '			<div class="tabel_box surpervision">' . "\r\n" . '				<form action="';
-echo Zhimin::buildUrl();
-echo '&action=search" method="post">' . "\r\n" . '					<div class="condition_top">' . "\r\n" . '						<div class="condition_240 condition_s">' . "\r\n" . '							<span class="condition_title">单位：</span>' . "\r\n" . '							<div class="select_200 select_div">' . "\r\n" . '								<input class="easyui-combotree" name="danwei" data-options="" style="width:100%;" id="easyui_search"/>' . "\r\n" . '							</div>' . "\r\n" . '						</div>' . "\r\n" . '						<div class="condition_175 condition_s">' . "\r\n" . '							<span class="condition_title">时间范围：</span>' . "\r\n" . '							<div class="select_112 select_div">' . "\r\n" . '								<select class="easy_se" name="date_time" style="width:100%;">' . "\r\n" . '									<option value="1" ';
+<?php if (Zhimin::request('date_time') == '1') {?>
+	 selected
+<?php }?>
 
-if (Zhimin::request('date_time') == '1') {
-	echo ' selected';
-}
+>本周
+</option>									
+<option value="2" 
 
-echo '>本周</option>' . "\r\n" . '									<option value="2" ';
+<?php if (Zhimin::request('date_time') == '2') {?>
+	 selected
+<?php }?>
 
-if (Zhimin::request('date_time') == '2') {
-	echo ' selected';
-}
+>本月
+</option>									
+<option value="3" 
 
-echo '>本月</option>' . "\r\n" . '									<option value="3" ';
+<?php if (Zhimin::request('date_time') == '3') {?>
+	 selected
+<?php }?>
 
-if (Zhimin::request('date_time') == '3') {
-	echo ' selected';
-}
+>一段时间
+</option>								
+</select>							
+</div>						
+</div>						
+<div class="condition_144 condition_s condition_t condi_time">							
+	<span>至
+	</span>							
+<div class="select_130 select_div">								
+	<div class="select_105 sele_c select_in">									
+	<input type="text" id="sdate" name="sdate" value="<?php echo Zhimin::request('sdate');?>"  />								
+</div>								
+<div class="select_time condition_start" onclick="laydate({elem: '#sdate',format: 'YYYY-MM-DD'});">
+</div>							
+</div>													
+</div>												
+<div class="condition_130 condition_s condi_time">														
+	<div class="select_130 select_div">								
+		<div class="select_105 sele_c select_in">									
+	<input type="text" id="edate" name="edate" value="<?php echo Zhimin::request('edate');?>" />								
+</div>								
+<div class="select_time condition_end" onclick="laydate({elem: '#edate',format: 'YYYY-MM-DD'});">
+</div>							
+</div>						
+</div>						
+<div class="condition_s sub">														
+	<input type="submit" value="" />						
+</div>						
+<div class="clear">
+</div>					
+</div>				
+</form>				
+<div class="action_div action_state">								
 
-echo '>一段时间</option>' . "\r\n" . '								</select>' . "\r\n" . '							</div>' . "\r\n" . '						</div>' . "\r\n" . '						<div class="condition_144 condition_s condition_t condi_time">' . "\r\n" . '							<span>至</span>' . "\r\n" . '							<div class="select_130 select_div">' . "\r\n" . '								<div class="select_105 sele_c select_in">' . "\r\n" . '									<input type="text" id="sdate" name="sdate" value="';
-echo Zhimin::request('sdate');
-echo '"  />' . "\r\n" . '								</div>' . "\r\n" . '								<div class="select_time condition_start" onclick="laydate({elem: \'#sdate\',format: \'YYYY-MM-DD\'});"></div>' . "\r\n" . '							</div>							' . "\r\n" . '						</div>						' . "\r\n" . '						<div class="condition_130 condition_s condi_time">							' . "\r\n" . '							<div class="select_130 select_div">' . "\r\n" . '								<div class="select_105 sele_c select_in">' . "\r\n" . '									<input type="text" id="edate" name="edate" value="';
-echo Zhimin::request('edate');
-echo '" />' . "\r\n" . '								</div>' . "\r\n" . '								<div class="select_time condition_end" onclick="laydate({elem: \'#edate\',format: \'YYYY-MM-DD\'});"></div>' . "\r\n" . '							</div>' . "\r\n" . '						</div>' . "\r\n" . '						<div class="condition_s sub">							' . "\r\n" . '							<input type="submit" value="" />' . "\r\n" . '						</div>' . "\r\n" . '						<div class="clear"></div>' . "\r\n" . '					</div>' . "\r\n" . '				</form>' . "\r\n" . '				<div class="action_div action_state">' . "\r\n" . '				' . "\r\n" . '				';
+<?php if ($user_auth['add'] == 1) {?>
+	
+	<span class="addlevel_s add_anno on">添加
+	</span>
+<?php }?>
 
-if ($user_auth['add'] == 1) {
-	echo '<span class="addlevel_s add_anno on">添加</span>';
-}
+<?php if ($user_auth['check'] == 1) {?>
+	
+	<span class="addlevel_s view_a">查看
+	</span>
+<?php }?>
 
-if ($user_auth['check'] == 1) {
-	echo '<span class="addlevel_s view_a">查看</span>';
-}
+<?php if ($user_auth['del'] == 1) {?>
+	
+	<span class="addlevel_s action_del" >删 除
+	</span>
+<?php }?>
 
-if ($user_auth['del'] == 1) {
-	echo '<span class="addlevel_s action_del" >删 除</span>';
-}
-
-echo '					<span class="normal_span" id="normal_n"></span>非紧急' . "\r\n" . '					<span class="normal_span" id="normal_s"></span>紧 急' . "\r\n" . '				</div>' . "\r\n" . '				<div class="table_height">			' . "\r\n" . '					<table class="table_detail">' . "\r\n" . '						<thead>' . "\r\n" . '							<tr>' . "\r\n" . '								<th class="t_back"><span class="span_white"></span></th>' . "\r\n" . '								<th width="6%">序号</th>' . "\r\n" . '								<th width="11%" class="t_back">发布' . $_SESSION['zfz_type'] . '（' . $_SESSION['zfz_type'] . '编号）</th>' . "\r\n" . '								<th width="16%">单位</th>' . "\r\n" . '								<th width="15%" class="t_back">公告主题</th>' . "\r\n" . '								<th width="16%">接收单位</th>' . "\r\n" . '								<th width="15%" class="t_back">发布时间</th>' . "\r\n" . '								<th width="15%">过期时间</th>' . "\r\n" . '							</tr>' . "\r\n" . '						</thead>' . "\r\n" . '						<tbody class="tbody_atten">' . "\r\n" . '							<!-- 这里有两个效果，一个隔行换色td_back-->' . "\r\n" . '							';
-
-if ($announces) {
+					
+<span class="normal_span" id="normal_n">
+</span>非紧急					
+<span class="normal_span" id="normal_s">
+</span>紧 急				
+</div>				
+<div class="table_height">								
+	<table class="table_detail">						
+		<thead>							
+		<tr>								
+	<th class="t_back">
+	<span class="span_white">
+</span>
+</th>								
+<th width="6%">序号
+</th>								
+<th width="11%" class="t_back">发布<?php echo $_SESSION['zfz_type'];?>（<?php echo $_SESSION['zfz_type'];?>编号）
+</th>								
+<th width="16%">单位
+</th>								
+<th width="15%" class="t_back">公告主题
+</th>								
+<th width="16%">接收单位
+</th>								
+<th width="15%" class="t_back">发布时间
+</th>								
+<th width="15%">过期时间
+</th>							
+</tr>						
+</thead>						
+<tbody class="tbody_atten">							
+	<!-- 这里有两个效果，一个隔行换色td_back-->							
+<?php if ($announces) {
 	foreach ($announces as $key => $value ) {
 		$announce_m = new AnnounceModel();
 		$user_m = new UserModel();
@@ -84,56 +177,339 @@ if ($announces) {
 		$announce['user_name'] = ($user_a['realname'] == '' ? $user_a['username'] : $user_a['realname']);
 		$announce['hostcode'] = ($user_a['hostcode'] == '' ? '--' : $user_a['hostcode']);
 		$announce['status'] = ($announce['jinji'] == '1' ? 'tr_red' : '');
-		$announce['stat'] = ($announce['jinji'] == '1' ? '<span class="normal_span" id="normal_s"></span>' : '<span class="normal_span" id="normal_n"></span>');
+		$announce['stat'] = ($announce['jinji'] == '1' ?'
+		<span class="normal_span" id="normal_s">
+		</span>' : '
+		<span class="normal_span" id="normal_n">
+		</span>');
 
-		if (($key % 2) == 1) {
-			$val = '<tr class=\'tr_p td_back ' . $announce['status'] . '\' date=\'' . $value['id'] . '\'>';
-		}
-		else {
-			$val = '<tr class=\'tr_p ' . $announce['status'] . '\' date=\'' . $value['id'] . '\'>';
-		}
+		if (($key % 2) == 1) {?>
+			
+			<tr class='tr_p td_back<?php echo $announce['status'];?>' date='<?php echo $value['id'] ;?>'>
+		<?php }
+		else {?>
+			
+			<tr class='tr_p<?php echo $announce['status'];?>' date='<?php echo $value['id'];?>'>
+		<?php }?>
 
-		$val .= '<td>' . $announce['stat'] . '</td>';
-		$val .= '<td>' . ($key + 1) . '</td>';
-		$val .= '<td>' . $announce['user_name'] . '(' . $announce['hostcode'] . ')</td>';
-		$val .= '<td>' . $announce['unit_name'] . '</td>';
-		$val .= '<td>' . $value['subject'] . '</td>';
-		$val .= '<td>' . $announce['unit_receive'] . '</td>';
-		$val .= '<td>' . date('Y-m-d H:i:s', $value['startdate']) . '</td>';
-		$val .= '<td>' . date('Y-m-d H:i:s', $value['enddate']) . '</td>';
-		echo $val;
+		
+		<td><?php echo $announce['stat'] ;?>
+		</td>
+		
+		<td><?php echo ($key + 1);?>
+		</td>
+		
+		<td><?php echo $announce['user_name'];?>(<?php echo $announce['hostcode'];?>)
+		</td>
+		
+		<td><?php echo $announce['unit_name'];?>
+		</td>
+		
+		<td><?php echo $value['subject'] ;?>
+		</td>
+		
+		<td><?php echo $announce['unit_receive'] ;?>
+		</td>
+		
+		<td><?php echo date('Y-m-d H:i:s', $value['startdate']);?>
+		</td>
+		
+		<td><?php echo date('Y-m-d H:i:s', $value['enddate']);?>
+		</td>
+		<?php $val;
 	}
 }
-else {
-	echo '<tr class=\'td_back\'><td colspan=\'8\'>暂无记录</td></tr>';
-}
+else {?>
+	<tr class='td_back'>
+		<td colspan='8'>暂无记录
+	</td>
+</tr>
+<?php }?>
 
-echo '					' . "\r\n" . '						</tbody>' . "\r\n" . '					</table>' . "\r\n" . '				</div>' . "\r\n" . '				<div class="page_link">' . "\r\n" . '					';
-$page_m = Zhimin::getComponent('page');
-echo $page_m->show($page['base_url'] . '&page=', '', 15, $page['total'], $page['page'], 4);
-echo '				' . "\r\n" . '				</div>' . "\r\n" . '			</div>			' . "\r\n" . '		</div>' . "\r\n" . '		<div class="detail_foot">' . "\r\n" . '			<img src="./images/main_detail_fbg.png" width="100%" alt="" />' . "\r\n" . '		</div>		' . "\r\n" . '	</div>' . "\r\n" . '	<!-- 添加弹框 -->' . "\r\n" . '	<div class="layer_notice atten_add">' . "\r\n" . '		<div class="notice_top atten_top" style="width:600px;background: url(../images/notice_top1.png) 0 0 no-repeat;"><span style="display: inline-block;width:20px;"></span>添加<span class="close close_btn"><img src="./images/close.png" alt="" /></span></div>' . "\r\n" . '		<div class="notice_body" style="width:600px">' . "\r\n" . '			<form action="';
-echo Zhimin::buildUrl();
-echo '&action=add" method="post" name="announce_add_form" id="announce_add_form">' . "\r\n" . '			<div class="con_atten_wrap recorder_notice" style="margin-left: 47px;">' . "\r\n" . '				<div class="condition_top">' . "\r\n" . '					<div class="condition_345 condition_s">' . "\r\n" . '						<span class="condition_title">公告主题：</span>' . "\r\n" . '						<font class="sign_d sign_star">*</font>' . "\r\n" . '						<div class="select_260 select_div select_relative select_in">								' . "\r\n" . '							<input type="text" class="input_error" name="subject" value="" />' . "\r\n" . '				<!-- 			<span class="error_msg">请填写公告主题</span>	 -->' . "\r\n" . '						</div>' . "\r\n" . '					</div>' . "\r\n" . '					<div class="clear"></div>' . "\r\n" . '				</div>' . "\r\n" . '				<div class="condition_top con_zindex_1">' . "\r\n" . '					<div class="condition_345 condition_s">' . "\r\n" . '						<span class="condition_title">单位：</span>' . "\r\n" . '						<font class="sign_d sign_star">*</font>' . "\r\n" . '							<div class="select_260 select_div">' . "\r\n" . '								<input class="easyui-combotree" name="danwei" data-options="" style="width:100%;" id="easyui_search"/>' . "\r\n" . '							</div>' . "\r\n" . '					</div>' . "\r\n" . '					<div class="clear"></div>' . "\r\n" . '				</div>' . "\r\n" . '				' . "\r\n" . '				<div class="condition_top">' . "\r\n" . '					<div class="condition_345 condition_s">' . "\r\n" . '						<span class="condition_title">紧急公告：</span>' . "\r\n" . '						<div class="select_260 select_div2 select_radio">' . "\r\n" . '								<label for="radio_yes">' . "\r\n" . '									是' . "\r\n" . '									<input type="radio" id="radio_yes" name="jinji" value="1"/>' . "\r\n" . '								</label>' . "\r\n" . '								<label for="radio_no">' . "\r\n" . '									否' . "\r\n" . '									<input type="radio" id="radio_no" name="jinji" checked value="0"/>' . "\r\n" . '								</label>' . "\r\n" . '						</div>' . "\r\n" . '					</div>' . "\r\n" . '					<div class="clear"></div>' . "\r\n" . '				</div>' . "\r\n" . '				' . "\r\n" . '				<div class="condition_top">' . "\r\n" . '					<div class="condition_345 condition_s">' . "\r\n" . '						<span class="condition_title">过期时间：</span>' . "\r\n" . '						<font class="sign_d sign_star">*</font>' . "\r\n" . '						<div class="select_260 select_div select_in">								' . "\r\n" . '							<div class="select_235 sele_c select_relative select_in select_time_i">' . "\r\n" . '								<input type="text" class="input_error" id="start_in" name="enddate" value="">' . "\r\n" . '						<!-- 		<span class="error_msg">请选择过期时间</span>	 -->' . "\r\n" . '							</div>' . "\r\n" . '							<div class="select_time condition_end" onclick="laydate({elem: \'#start_in\',istime: true,format: \'YYYY-MM-DD hh:mm:ss\'});"></div>' . "\r\n" . '						</div>' . "\r\n" . '					</div>' . "\r\n" . '					<div class="clear"></div>' . "\r\n" . '				</div>' . "\r\n" . '				<div class="condition_top">' . "\r\n" . '					<div class="clear"></div>' . "\r\n" . '				</div>' . "\r\n" . '				<div class="condition_top" style="width: 500px;height: 400px;">' . "\r\n" . '					<div class="condition_345 condition_s condition_textarea condition_height" style="width: 517px;height: 400px;">' . "\r\n" . '						<span class="condition_title">公告内容：</span>' . "\r\n" . '						<font class="sign_d sign_star">*</font>' . "\r\n" . '						<div class="select_260 select_div select_relative select_days textarea_in" style="width: 432px;height: 382px;">								' . "\r\n" . '							<textarea id="editor" class="input_error" name="content"></textarea>' . "\r\n" . '				<!-- 			<span class="error_msg">请填写公告内容</span>	 -->' . "\r\n" . '						</div>' . "\r\n" . '					</div>' . "\r\n" . '					<div class="clear"></div>' . "\r\n" . '				</div>'. "\r\n" . '				<div class="condition_top">' . "\r\n" . '					<div class="condition_345 condition_s ">' . "\r\n" . '						<font class="sign_d sign_star">&nbsp;</font>						' . "\r\n" . '						<div class="select_260 select_div select_in selec_text">								' . "\r\n" . '							<span class="sure_add">确 定</span>' . "\r\n" . '							<span class="sure_cancle close_btn">取 消</span>' . "\r\n" . '						</div>' . "\r\n" . '					</div>' . "\r\n" . '					<div class="clear"></div>' . "\r\n" . '				</div>' . "\r\n" . '			</div>				' . "\r\n" . '			</form>' . "\r\n" . '		</div>' . "\r\n" . '		<div class="notice_foot"></div>' . "\r\n" . '	</div>' . "\r\n" . '	' . "\r\n" . '	<!-- 确认提示框 -->' . "\r\n" . '	<div class="layer_notice lay_confirm_del">' . "\r\n" . '		<div class="notice_top"><span class="close close_btn"><img src="./images/close.png" alt="" /></span></div>' . "\r\n" . '		<div class="notice_body1">' . "\r\n" . '			<div class="n_left">' . "\r\n" . '				<img src="./images/del_bg.png">' . "\r\n" . '			</div>' . "\r\n" . '			<div class="n_right">' . "\r\n" . '				<p>确定删除此条信息？</p>' . "\r\n" . '				<div class="clear"></div>' . "\r\n" . '				<span class="sure_span sure_one_del">确 定</span>' . "\r\n" . '				<span class="cancle_span close_btn">取 消</span>' . "\r\n" . '			</div>' . "\r\n" . '		</div>' . "\r\n" . '		<div class="notice_foot"></div>' . "\r\n" . '	</div>' . "\r\n" . '	<!-- 成功提示框 -->' . "\r\n" . '	<div class="layer_notice lay_success">' . "\r\n" . '		<div class="notice_top"><span class="close close_btn"><img src="./images/close.png" alt="" /></span></div>' . "\r\n" . '		<div class="notice_body">' . "\r\n" . '			<div class="n_left">' . "\r\n" . '				<img src="./images/success_bg.png">' . "\r\n" . '			</div>' . "\r\n" . '			<div class="n_right">' . "\r\n" . '				<p id="success_flg">删除成功......<font>3</font>秒钟后返回页面！</p>' . "\r\n" . '				<div class="clear"></div>' . "\r\n" . '				<span class="cancle_span close_btn">确 定</span>' . "\r\n" . '			</div>' . "\r\n" . '		</div>' . "\r\n" . '		<div class="notice_foot"></div>' . "\r\n" . '	</div>' . "\r\n" . '	<!-- 失败提示框 -->' . "\r\n" . '	<div class="layer_notice lay_wrong">' . "\r\n" . '		<div class="notice_top"><span class="close close_btn"><img src="./images/close.png" alt="" /></span></div>' . "\r\n" . '		<div class="notice_body">' . "\r\n" . '			<div class="n_left">' . "\r\n" . '				<img src="./images/notice_bg.png">' . "\r\n" . '			</div>' . "\r\n" . '			<div class="n_right">' . "\r\n" . '				<p id="fail_flg">删除失败......<font>3</font>秒钟后返回页面！</p>' . "\r\n" . '				<div class="clear"></div>' . "\r\n" . '				<span class="cancle_span close_btn_self">确 定</span>' . "\r\n" . '			</div>' . "\r\n" . '		</div>' . "\r\n" . '		<div class="notice_foot"></div>' . "\r\n" . '	</div>' . "\r\n" . '	<!-- 查看 -->' . "\r\n" . '	<div class="layer_notice atten_view">' . "\r\n" . '		<div class="notice_top atten_top" style="width:600px;background: url(../images/notice_top1.png) 0 0 no-repeat;"><span style="display: inline-block;width:20px;"></span>查看<span class="close close_btn"><img src="./images/close.png" alt="" /></span></div>' . "\r\n" . '		<div class="notice_body" id="notice_body" style="width:600px">' . "\r\n" . '		</div>' . "\r\n" . '		<div class="notice_foot"></div>' . "\r\n" . '	</div>' . "\r\n" . '<script type="text/javascript">' . "\r\n" . '/*实例化编辑器*/var ue = UE.getEditor(\'editor\',{
+											
+</tbody>					
+</table>				
+</div>				
+<div class="page_link">					
+<?php $page_m = Zhimin::getComponent('page');
+echo $page_m->show($page['base_url'] . '&page=', '', 15, $page['total'], $page['page'], 4);?>
+								
+</div>			
+</div>					
+</div>		
+<div class="detail_foot">			
+	<img src="./images/main_detail_fbg.png" width="100%" alt="" />		
+</div>			
+</div>	
+<!-- 添加弹框 -->	
+<div class="layer_notice atten_add">		
+	<div class="notice_top atten_top" style="width:600px;background: url(../images/notice_top1.png) 0 0 no-repeat;">
+	<span style="display: inline-block;width:20px;">
+</span>添加
+<span class="close close_btn">
+	<img src="./images/close.png" alt="" />
+</span>
+</div>		
+<div class="notice_body" style="width:600px">			
+	<form action="<?php echo Zhimin::buildUrl();?>&action=add" method="post" name="announce_add_form" id="announce_add_form">			
+<div class="con_atten_wrap recorder_notice" style="margin-left: 47px;">				
+	<div class="condition_top">					
+		<div class="condition_345 condition_s">						
+	<span class="condition_title">公告主题：
+	</span>						
+<font class="sign_d sign_star">*
+</font>						
+<div class="select_260 select_div select_relative select_in">															
+	<input type="text" class="input_error" name="subject" value="" />				
+<!-- 			
+<span class="error_msg">请填写公告主题
+</span>	 -->						
+</div>					
+</div>					
+<div class="clear">
+</div>				
+</div>				
+<div class="condition_top con_zindex_1">					
+	<div class="condition_345 condition_s">						
+	<span class="condition_title">单位：
+	</span>						
+<font class="sign_d sign_star">*
+</font>							
+<div class="select_260 select_div">								
+	<input class="easyui-combotree" name="danwei" data-options="" style="width:100%;" id="easyui_search"/>							
+</div>					
+</div>					
+<div class="clear">
+</div>				
+</div>								
+<div class="condition_top">					
+	<div class="condition_345 condition_s">						
+	<span class="condition_title">紧急公告：
+	</span>						
+<div class="select_260 select_div2 select_radio">								
+	<label for="radio_yes">									是									
+		<input type="radio" id="radio_yes" name="jinji" value="1"/>								
+</label>								
+<label for="radio_no">									否									
+	<input type="radio" id="radio_no" name="jinji" checked value="0"/>								
+</label>						
+</div>					
+</div>					
+<div class="clear">
+</div>				
+</div>								
+<div class="condition_top">					
+	<div class="condition_345 condition_s">						
+	<span class="condition_title">过期时间：
+	</span>						
+<font class="sign_d sign_star">*
+</font>						
+<div class="select_260 select_div select_in">															
+	<div class="select_235 sele_c select_relative select_in select_time_i">								
+		<input type="text" class="input_error" id="start_in" name="enddate" value="">						
+<!-- 		
+<span class="error_msg">请选择过期时间
+</span>	 -->							
+</div>							
+<div class="select_time condition_end" onclick="laydate({elem: '#start_in',istime: true,format: 'YYYY-MM-DD hh:mm:ss'});">
+</div>						
+</div>					
+</div>					
+<div class="clear">
+</div>				
+</div>				
+<div class="condition_top">					
+	<div class="clear">
+	</div>				
+</div>				
+<div class="condition_top" style="width: 500px;height: 400px;">					
+	<div class="condition_345 condition_s condition_textarea condition_height" style="width: 517px;height: 400px;">						
+	<span class="condition_title">公告内容：
+	</span>						
+<font class="sign_d sign_star">*
+</font>						
+<div class="select_260 select_div select_relative select_days textarea_in" style="width: 432px;height: 382px;">															
+	<textarea id="editor" class="input_error" name="content">
+	</textarea>				
+<!-- 			
+<span class="error_msg">请填写公告内容
+</span>	 -->						
+</div>					
+</div>					
+<div class="clear">
+</div>				
+</div>'. "rn" . '				
+<div class="condition_top">					
+	<div class="condition_345 condition_s ">						
+	<font class="sign_d sign_star">&nbsp;
+	</font>												
+<div class="select_260 select_div select_in selec_text">															
+	<span class="sure_add">确 定
+	</span>							
+<span class="sure_cancle close_btn">取 消
+</span>						
+</div>					
+</div>					
+<div class="clear">
+</div>				
+</div>			
+</div>							
+</form>		
+</div>		
+<div class="notice_foot">
+</div>	
+</div>		
+<!-- 确认提示框 -->	
+<div class="layer_notice lay_confirm_del">		
+	<div class="notice_top">
+	<span class="close close_btn">
+	<img src="./images/close.png" alt="" />
+</span>
+</div>		
+<div class="notice_body1">			
+	<div class="n_left">				
+		<img src="./images/del_bg.png">			
+</div>			
+<div class="n_right">				
+	<p>确定删除此条信息？
+	</p>				
+<div class="clear">
+</div>				
+<span class="sure_span sure_one_del">确 定
+</span>				
+<span class="cancle_span close_btn">取 消
+</span>			
+</div>		
+</div>		
+<div class="notice_foot">
+</div>	
+</div>	
+<!-- 成功提示框 -->	
+<div class="layer_notice lay_success">		
+	<div class="notice_top">
+	<span class="close close_btn">
+	<img src="./images/close.png" alt="" />
+</span>
+</div>		
+<div class="notice_body">			
+	<div class="n_left">				
+		<img src="./images/success_bg.png">			
+</div>			
+<div class="n_right">				
+	<p id="success_flg">删除成功......
+	<font>3
+</font>秒钟后返回页面！
+</p>				
+<div class="clear">
+</div>				
+<span class="cancle_span close_btn">确 定
+</span>			
+</div>		
+</div>		
+<div class="notice_foot">
+</div>	
+</div>	
+<!-- 失败提示框 -->	
+<div class="layer_notice lay_wrong">		
+	<div class="notice_top">
+	<span class="close close_btn">
+	<img src="./images/close.png" alt="" />
+</span>
+</div>		
+<div class="notice_body">			
+	<div class="n_left">				
+		<img src="./images/notice_bg.png">			
+</div>			
+<div class="n_right">				
+	<p id="fail_flg">删除失败......
+	<font>3
+</font>秒钟后返回页面！
+</p>				
+<div class="clear">
+</div>				
+<span class="cancle_span close_btn_self">确 定
+</span>			
+</div>		
+</div>		
+<div class="notice_foot">
+</div>	
+</div>	
+<!-- 查看 -->	
+<div class="layer_notice atten_view">		
+	<div class="notice_top atten_top" style="width:600px;background: url(../images/notice_top1.png) 0 0 no-repeat;">
+	<span style="display: inline-block;width:20px;">
+</span>查看
+<span class="close close_btn">
+	<img src="./images/close.png" alt="" />
+</span>
+</div>		
+<div class="notice_body" id="notice_body" style="width:600px">		
+</div>		
+<div class="notice_foot">
+</div>	
+</div>
+<script type="text/javascript">
+	/*实例化编辑器*/
+	var ue = UE.getEditor('editor',{
 		toolbars: [
-            [\'source\', \'undo\', \'redo\'],
-            [\'bold\', \'italic\', \'underline\', \'fontborder\', \'strikethrough\', \'superscript\', \'subscript\', \'removeformat\', \'formatmatch\', \'autotypeset\', \'blockquote\', \'pasteplain\', \'|\', \'forecolor\', \'backcolor\', \'insertorderedlist\', \'insertunorderedlist\', \'selectall\', \'cleardoc\']
+            ['source', 'undo', 'redo'],
+            ['bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc']
         ],
         initialFrameWidth:431,
     });
-$(document).ready(function(){' . "\r\n" . '	/*search list tree*/' . "\r\n" . '	$("#easyui_search").combotree({url:\'';
-echo Zhimin::buildUrl('unitjson', 'other') . '&id=bh&text=dname';
-echo '\',method:\'get\',labelPosition:\'top\',panelWidth:\'500px\',' . "\r\n" . '	// 设置选中项' . "\r\n" . '	onLoadSuccess:function(node,data){' . "\r\n" . '		$("#easyui_search").combotree(\'setValues\', [\'';
-echo Zhimin::request('danwei');
-echo '\']);  ' . "\r\n" . '    }  ' . "\r\n" . '	});  /*search list tree end*/ ' . "\r\n" . '	/*add tree*/' . "\r\n" . '	$("#easyui_add").combotree({url:\'';
-echo Zhimin::buildUrl('unitjson', 'other') . '&id=bh&text=dname';
-echo '\',method:\'get\',labelPosition:\'top\',panelWidth:\'500px\',' . "\r\n" . '	// 设置选中项' . "\r\n" . '	onLoadSuccess:function(node,data){' . "\r\n" . '		$("#easyui_add").combotree(\'setValues\', [\'\']);  ' . "\r\n" . '    }  ' . "\r\n" . '	});/*add tree end*/' . "\r\n" . '	$(\'.easy_u\').combobox({panelHeight:\'120px\',selectOnNavigation:true,editable:false,labelPosition:\'top\'});' . "\r\n" . '	' . "\r\n" . '})' . "\r\n" . '</script>' . "\r\n" . '<script type="text/javascript">' . "\r\n" . '$(document).ready(function(){' . "\r\n" . '	var n=\'';
-echo Zhimin::request('date_time');
-echo '\';' . "\r\n" . '	if(n==\'3\'){' . "\r\n" . '		$(".condi_time").show();' . "\r\n" . '		}else{' . "\r\n" . '		$(".condi_time").hide();' . "\r\n" . '	}' . "\r\n" . '	$(".easyui-combotree").combotree({url:\'';
-echo Zhimin::buildUrl('unitjson', 'other') . '&id=bh&text=dname';
-echo '\',method:\'get\',labelPosition:\'top\',panelWidth:\'500px\',' . "\r\n" . '	// 设置选中项' . "\r\n" . '	onLoadSuccess:function(node,data){' . "\r\n" . '		$(".easyui-combotree").combotree(\'setValues\', [\'';
-echo Zhimin::request('danwei');
-echo '\']);  ' . "\r\n" . '    }  ' . "\r\n" . '	});' . "\r\n" . '	$(\'.easy_u\').combobox({panelHeight:\'120px\',selectOnNavigation:true,editable:false,labelPosition:\'top\'});' . "\r\n" . '	$(\'.easy_se\').combobox({panelHeight:\'80px\',selectOnNavigation:true,editable:false,labelPosition:\'top\',' . "\r\n" . '	onChange: function (n,o) {' . "\r\n" . '		if(n==\'3\'){' . "\r\n" . '			$(".condi_time").show();' . "\r\n" . '		}else{' . "\r\n" . '			$(".condi_time").hide();' . "\r\n" . '		}' . "\r\n" . '	},' . "\r\n" . '	onLoadSuccess:function(data){ ' . "\r\n" . '		$(\'.easy_se\').combobox(\'setValue\',[\'';
-echo Zhimin::request('date_time');
-echo '\']);' . "\r\n" . '	}' . "\r\n" . '});' . "\r\n" . '})' . "\r\n" . '</script>' . "\r\n" . '</body>' . "\r\n" . '</html>';
+	$(document).ready(function(){	
+		/*search list tree*/	
+		$("#easyui_search").combotree({
+			url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname',
+			method:'get',labelPosition:'top',panelWidth:'500px',	
+			// 设置选中项	
+			onLoadSuccess:function(node,data){		
+				$("#easyui_search").combotree('setValues', ['<?php echo Zhimin::request('danwei');?>']);  
+			}  	
+	});  
+		/*search list tree end*/ 	
+		/*add tree*/	
+		$("#easyui_add").combotree({url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname',
+			method:'get',labelPosition:'top',panelWidth:'500px',	
+			// 设置选中项	
+			onLoadSuccess:function(node,data){		
+				$("#easyui_add").combotree('setValues', ['']);      
+			}  	
+		});
+		/*add tree end*/	
+		$('.easy_u').combobox({panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'});	
+	})</script>
+	<script type="text/javascript">
+$(document).ready(function(){	
+	var n='<?php echo Zhimin::request('date_time');?>';
+		if(n=='3'){		
+			$(".condi_time").show();		
+		}else{		
+			$(".condi_time").hide();	
+		}	
+		$(".easyui-combotree").combotree({
+			url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname',
+			method:'get',labelPosition:'top',panelWidth:'500px',	
+			// 设置选中项	
+			onLoadSuccess:function(node,data){		
+				$(".easyui-combotree").combotree('setValues', ['<?php echo Zhimin::request('danwei');?>']);      
+			}  	
+		});	
+		$('.easy_u').combobox({panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'});	
+		$('.easy_se').combobox({panelHeight:'80px',selectOnNavigation:true,editable:false,labelPosition:'top',	
+			onChange: function (n,o) {		
+				if(n=='3'){			
+					$(".condi_time").show();		
+				}else{			
+					$(".condi_time").hide();		
+				}	
+			},	
+			onLoadSuccess:function(data){ 		
+				$('.easy_se').combobox('setValue',['<?php echo Zhimin::request('date_time');?>']);	
+			}
+		});
+	})
+</script>
+</body>
+</html>
 
-?>

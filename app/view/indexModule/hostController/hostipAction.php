@@ -30,7 +30,7 @@
 		</div>
 		<div class="detail_body">
 			<div class="tabel_box surpervision">
-				<form action="<?php Zhimin::buildUrl();?>
+				<form action="<?php echo Zhimin::buildUrl();?>
 &action=search" method="post">
 					<div class="condition_top">
 						<div class="condition_263 condition_s">

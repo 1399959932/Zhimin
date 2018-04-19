@@ -684,13 +684,14 @@ $(document).ready(function(){
 		method:'get',labelPosition:'top',panelWidth:'500px',
 			// 设置选中项	
 			onLoadSuccess:function(node,data){		
-				$("#easyui_search").combotree('setValues', ["<?php Zhimin::request('danwei');?>"]);      
+				$("#easyui_search").combotree('setValues', ["<?php echo Zhimin::request('danwei');?>"]);      
 			}  	
 		});  
 	/*search list tree end*/ 	
 	/*add tree*/	
-	$("#easyui_add").combotree({url:"<?php Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname",
-	method:'get',labelPosition:'top',panelWidth:'500px',	
+	$("#easyui_add").combotree({
+		url:"<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname",
+		method:'get',labelPosition:'top',panelWidth:'500px',	
 		// 设置选中项	
 		onLoadSuccess:function(node,data){		
 			$("#easyui_add").combotree('setValues', ['']);      

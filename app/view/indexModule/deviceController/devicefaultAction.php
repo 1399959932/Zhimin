@@ -207,7 +207,7 @@
 <th width="11%">启用时间
 </th>								
 <th class="t_back" width="11%">备注
-</th>							s
+</th>			
 </tr>						
 </thead>						
 <tbody>							
@@ -268,27 +268,29 @@ echo $page_m->show($page['base_url'] . '&page=', '', 15, $page['total'], $page['
 </div>			
 </div>
 <script type="text/javascript">
-$(document).ready(function(){	
-	/*search list tree*/	
-	$("#easyui_search").combotree({
-		url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname',
-		method:'get',labelPosition:'top',panelWidth:'500px',
-			// 设置选中项	
-			onLoadSuccess:function(node,data){		
-				$("#easyui_search").combotree('setValues', ["<?php Zhimin::request('danwei');?>"]);      
-			}  	
-		});  
-	/*search list tree end*/ 	
-	/*add tree*/	
-	$("#easyui_add").combotree({url:"<?php Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname",
-	method:'get',labelPosition:'top',panelWidth:'500px',	
+	$(document).ready(function (){
+		$("#easyui_search").combotree({
+			url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=unitsyscode&text=dname',
+		method:'get',labelPosition:'top',panelWidth:'500px',	
 		// 设置选中项	
 		onLoadSuccess:function(node,data){		
-			$("#easyui_add").combotree('setValues', ['']);      
-				}  	
-		});
-		/*add tree end*/	
-	$('.easy_u').combobox({panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'});	
+			$("#easyui_search").combotree('setValues', ['<?php echo Zhimin::request('danwei');?>']);      
+		}  	
+	});  
+	/*search list tree end*/ 	
+	/*add tree*/	
+	$("#easyui_add").combotree({
+		url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname',
+		method:'get',labelPosition:'top',panelWidth:'500px',	
+	// 设置选中项	
+	onLoadSuccess:function(node,data){		
+	$("#easyui_add").combotree('setValues', ['']);      
+	}  	
+	});
+	/*add tree end*/	
+	$('.easy_u').combobox({
+		panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'
+	});			
 })
 </script>
 </body>
