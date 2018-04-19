@@ -422,7 +422,7 @@ echo $page_m->show($page['base_url'] . '&page=', '', 15, $page['total'], $page['
 	})</script>
 	<script type="text/javascript">
 $(document).ready(function(){	
-	var n='<?php echo Zhimin::request('date_time');?>
+	var n='<?php echo Zhimin::request('date_time');?>';
 		if(n=='3'){		
 			$(".condi_time").show();		
 		}else{		

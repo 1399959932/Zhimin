@@ -123,7 +123,7 @@
 </div>						
 </div>						
 <div class="condition_175 condition_s">							
-	<span class="condition_title">记录仪编号：
+	<span class="condition_title">记录仪编号
 </span>							
 <div class="select_100 select_div select_in">								
 	<input type="text" name="deviceid" value="<?php echo Zhimin::request('deviceid');?>

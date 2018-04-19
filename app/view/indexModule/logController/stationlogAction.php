@@ -495,33 +495,37 @@ echo $page_m->show($page['base_url'] . '&page=', '', 15, $page['total'], $page['
 </body>
 </html>
 <script type="text/javascript">
-	$(document).ready(function(){
-		var n='<?php $date_time;?>';
-		if(n=='3'){	
-			$(".condi_time").show();	
-	}else{	
-		$(".condi_time").hide();
-	}
-	$(".easyui-combotree").combotree({
-		url:"<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname",
-		method:'get',labelPosition:'top',panelWidth:'500px',
-		// 设置选中项
-		onLoadSuccess:function(node,data){	
-			$(".easyui-combotree").combotree('setValues', ['<?php echo $danwei_default;?>']);      
-		}  
-	});
-	$('.easy_u').combobox({panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'});
-	$('.easy_se').combobox({panelHeight:'80px',selectOnNavigation:true,editable:false,labelPosition:'top',
-		onChange: function (n,o) {	
-			if(n=='3'){		
-				$(".condi_time").show();	
-			}else{		
-				$(".condi_time").hide();	
-			}
-		},
-		onLoadSuccess:function(data){ 	
-			$('.easy_se').combobox('setValue',[n]);
-		}}
-	);
+	$(document).ready(function(){	
+		var n="<?php echo $date_time;?>";	
+		if(n=='3'){		
+			$(".condi_time").show();		
+		}else{		
+			$(".condi_time").hide();	
+		}	
+		$(".easyui-combotree").combotree({
+			url:"<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname",
+			method:'get',
+			labelPosition:'top',
+			panelWidth:'500px',	
+		// 设置选中项	
+		onLoadSuccess:function(node,data){		
+			$(".easyui-combotree").combotree('setValues', ["<?php echo $danwei_default;?>"]);      
+		}  	
+	});	
+	$('.easy_u').combobox({
+		panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'
+	});	
+	$('.easy_se').combobox({
+		panelHeight:'80px',selectOnNavigation:true,editable:false,labelPosition:'top',
+		onChange: function (n,o) {		
+		if(n=='3'){			
+			$(".condi_time").show();		
+		}else{			
+		$(".condi_time").hide();		
+	}	
+},	
+onLoadSuccess:function(data){ 		
+	$('.easy_se').combobox('setValue',[n]);	}
+});
 })
 </script>

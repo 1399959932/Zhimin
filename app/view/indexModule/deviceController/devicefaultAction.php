@@ -67,7 +67,7 @@
 <div class="tabel_box surpervision">				
 
 <form action="
-<?php Zhimin::buildUrl();?>" method="post">					
+<?php echo Zhimin::buildUrl();?>" method="post">					
 
 <div class="condition_top con_zindex_1">						
 
@@ -90,7 +90,7 @@
 </span>	
 <div class="select_100 select_div select_in">								
 
-<input type="text" name="hostname" value="<?php Zhimin::request('hostname');?>">							
+<input type="text" name="hostname" value="<?php echo Zhimin::request('hostname');?>">							
 
 </div>						
 
@@ -112,7 +112,7 @@
 <div class="select_105 sele_c select_in">									
 
 <input type="text" value="
-<?php Zhimin::request('sdate');?>" name="sdate" id="sdate">								
+<?php echo Zhimin::request('sdate');?>" name="sdate" id="sdate">								
 
 </div>								
 
@@ -130,7 +130,7 @@
 <div class="select_105 sele_c select_in">									
 			
 <input type="text" value="
-<?php Zhimin::request('edate');?>" name="edate" id="edate">								
+<?php echo Zhimin::request('edate');?>" name="edate" id="edate">								
 			
 </div>								
 			
@@ -155,21 +155,22 @@
 <div class="select_200 select_div select_in">								
 						
 <input type="text" value="
-<?php Zhimin::request('reason');?>" name="reason">
+<?php echo Zhimin::request('reason');?>" name="reason">
 					
 </div>						
 					
 </div>						
-					
+			
 <div class="condition_175 condition_s">							
 						
-<span class="condition_title">记录仪编号：</span>							
+<span class="condition_title">记录仪编号</span>							
 						
 <div class="select_100 select_div select_in">												
-	<input type="text" value="<?php Zhimin::request('hostbody');?>" name="hostbody">		
+	<input type="text" value="<?php echo Zhimin::request('hostbody');?>" name="hostbody" >		
 </div>						
 					
-</div>						
+</div>		
+
 					
 <div class="condition_s sub">														
 						
@@ -268,29 +269,28 @@ echo $page_m->show($page['base_url'] . '&page=', '', 15, $page['total'], $page['
 </div>			
 </div>
 <script type="text/javascript">
-	$(document).ready(function (){
-		$("#easyui_search").combotree({
-			url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=unitsyscode&text=dname',
-		method:'get',labelPosition:'top',panelWidth:'500px',	
-		// 设置选中项	
-		onLoadSuccess:function(node,data){		
-			$("#easyui_search").combotree('setValues', ['<?php echo Zhimin::request('danwei');?>']);      
-		}  	
-	});  
+$(document).ready(function(){	
+	/*search list tree*/	
+	$("#easyui_search").combotree({
+		url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname',
+		method:'get',labelPosition:'top',panelWidth:'500px',
+			// 设置选中项	
+			onLoadSuccess:function(node,data){		
+				$("#easyui_search").combotree('setValues', ["<?php echo Zhimin::request('danwei');?>"]);      
+			}  	
+		});  
 	/*search list tree end*/ 	
 	/*add tree*/	
 	$("#easyui_add").combotree({
-		url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname',
+		url:"<?php echo Zhimin::buildUrl('unitjson', 'other')?>&id=bh&text=dname",
 		method:'get',labelPosition:'top',panelWidth:'500px',	
-	// 设置选中项	
-	onLoadSuccess:function(node,data){		
-	$("#easyui_add").combotree('setValues', ['']);      
-	}  	
-	});
-	/*add tree end*/	
-	$('.easy_u').combobox({
-		panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'
-	});			
+		// 设置选中项	
+		onLoadSuccess:function(node,data){		
+			$("#easyui_add").combotree('setValues', ['']);      
+				}  	
+		});
+		/*add tree end*/	
+	$('.easy_u').combobox({panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'});	
 })
 </script>
 </body>

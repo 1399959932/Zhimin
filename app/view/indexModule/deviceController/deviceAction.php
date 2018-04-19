@@ -28,8 +28,7 @@
 </div>	
 <div class="detail_body">		
 <div class="tabel_box surpervision">			
-<form action="<?php echo Zhimin::buildUrl();?>
-&action=search" method="post">			
+<form action="<?php echo Zhimin::buildUrl();?>&action=search" method="post">			
 <div class="condition_top con_zindex_1">					
 <div class="condition_280 condition_s">						
 <span class="condition_title">单位：</span>						
@@ -48,7 +47,7 @@
 <?php echo $_SESSION['zfz_type']?>编号：
 </span>						
 <div class="select_100 select_div select_in">							
-	<input type="text" value="<?php Zhimin::request('hostcode');?>" name="hostcode">						
+	<input type="text" value="<?php echo Zhimin::request('hostcode');?>" name="hostcode">						
 </div>					
 </div>					
 <div class="clear"></div>				
@@ -57,7 +56,7 @@
 <div class="condition_280 condition_s">						
 <span class="condition_title">记录仪编号：</span>						
 <div class="select_200 select_div select_in">															
-<input type="text" value="<?php Zhimin::request('hostbody');?>" name="hostbody">						
+<input type="text" value="<?php echo Zhimin::request('hostbody');?>" name="hostbody">						
 </div>					
 </div>					
 <div class="condition_s sub">													
@@ -169,7 +168,7 @@ td_back
 <img src="./images/close.png" alt="" /></span>
 </div>	
 <div class="notice_body">		
-<form action="<?php Zhimin::buildUrl();?>&action=add" method="post" name="device_add_form" id="device_add_form">		
+<form action="<?php echo Zhimin::buildUrl();?>&action=add" method="post" name="device_add_form" id="device_add_form">		
 <div class="con_atten_wrap recorder_notice">			
 <div class="condition_top">				
 <div class="condition_345 condition_s">					
@@ -204,12 +203,12 @@ td_back
 </div>			
 <div class="condition_top">				
 <div class="condition_345 condition_s">					
-<span class="condition_title grapher">记录仪编号&nbsp;:</span>					
-<font class="sign_d sign_star">*</font>					
-<div class="select_260 select_div select_in">														
-<input type="text" class="input_error" name="hostbody" value="" />						
-<span class="error_msg">请填写记录仪编号</span>					
-</div>				
+<span class="condition_title grapher">记录仪编号&nbsp;:</span>						
+<font class="sign_d sign_star">*</font>						
+<div class="select_260 select_div select_in">															
+	<input type="text" class="input_error" name="hostbody" value="" />			
+	<span class="error_msg" >请填写记录仪编号</span>				
+</div>			
 </div>				
 <div class="clear"></div>			
 </div>			
@@ -265,7 +264,7 @@ td_back
 <img src="./images/close.png" alt="" />
 </span></div>	
 <div class="notice_body">		
-<form action="<?php Zhimin::buildUrl();?>&action=edit" method="post" name="device_edit_form" id="device_edit_form">		
+<form action="<?php echo Zhimin::buildUrl();?>&action=edit" method="post" name="device_edit_form" id="device_edit_form">		
 <div class="con_atten_wrap recorder_notice">			
 <div class="condition_top">				
 <div class="condition_345 condition_s">					
@@ -386,7 +385,7 @@ td_back
 <option value="">-请选择-</option>							
 
 <?php foreach ($device_repair_array as $k => $v ) {?>
-<option value="<?php $v['confcode']?>"
+<option value="<?php echo $v['confcode'];?>"
 >{echo $v['confname']}</option>
 <?php }?>
 </select>					
