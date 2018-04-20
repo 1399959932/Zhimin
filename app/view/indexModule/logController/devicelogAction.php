@@ -79,18 +79,18 @@
 </span>							
 <div class="select_130 select_div">								
 	<div class="select_105 sele_c select_in">									
-	<input type="text" id="start" name="sdate" value="<?php Zhimin::request('sdate');?>"  />								
+	<input type="text" id="start" name="sdate" value="<?php echo Zhimin::request('sdate');?>"  />								
 </div>								
-<div class="select_time condition_start" onclick="laydate({elem: \'#start\',format: \'YYYY.MM.DD\'});">
+<div class="select_time condition_start" onclick="laydate({elem: '#start',format: 'YYYY.MM.DD'});">
 </div>							
 </div>													
 </div>												
 <div class="condition_130 condition_s condi_time">														
 	<div class="select_130 select_div">								
 	<div class="select_105 sele_c select_in">									
-	<input id="end" type="text" name="edate" value="<?php Zhimin::request('edate');?>" />								
+	<input id="end" type="text" name="edate" value="<?php echo Zhimin::request('edate');?>" />								
 </div>								
-<div class="select_time condition_end" onclick="laydate({elem: \'#end\',format: \'YYYY.MM.DD\'});">
+<div class="select_time condition_end" onclick="laydate({elem: '#end',format: 'YYYY.MM.DD'});">
 </div>							
 </div>						
 </div>						
@@ -159,7 +159,7 @@
 </th>								
 <th width="19%">所属单位
 </th>								
-<th class="t_back" width="12%"><?php echo $_SESSION['zfz_type']?>姓名（<?php echo $_SESSION['zfz_type']?>编号）
+<th class="t_back" width="12%"><?php echo $_SESSION['zfz_type'];?>姓名（<?php echo $_SESSION['zfz_type'];?>编号）
 </th>								
 <th width="9%">操作类型
 </th>								

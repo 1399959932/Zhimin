@@ -468,7 +468,7 @@ echo $page_m->show($page['base_url'] . '&page=', '', 15, $page['total'], $page['
 		$(".condi_time").hide();
 	}	
 		$(".easyui-combotree").combotree({
-			url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>';      
+			url:'<?php echo Zhimin::buildUrl('unitjson', 'other')?>'      
 	 });	
 		$('.easy_u').combobox({
 			panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'

@@ -78,7 +78,7 @@
 </span>							
 <div class="select_130 select_div">								
 	<div class="select_105 sele_c select_in">									
-	<input type="text" id="sdate" name="sdate" value="<?php Zhimin::request('sdate');?>"  />								
+	<input type="text" id="sdate" name="sdate" value="<?php echo Zhimin::request('sdate');?>"  />								
 </div>								
 <div class="select_time condition_start" onclick="laydate({elem: '#sdate',format: 'YYYY-MM-DD'});">
 </div>							
@@ -87,7 +87,7 @@
 <div class="condition_130 condition_s condi_time">														
 	<div class="select_130 select_div">								
 	<div class="select_105 sele_c select_in">									
-	<input type="text" id="edate" name="edate" value="<?php Zhimin::request('edate');?>" />								
+	<input type="text" id="edate" name="edate" value="<?php echo Zhimin::request('edate');?>" />								
 </div>								
 <div class="select_time condition_end" onclick="laydate({elem: '#edate',format: 'YYYY-MM-DD'});">
 </div>							
@@ -205,9 +205,7 @@ else {
 	</td>								
 		<td>
 		<?php echo $v['realname'] == '' ? $v['username'] : $v['realname'];?>
-		（
-		<?php echo $v['hostcode'];?>
-		）
+		（<?php echo $v['hostcode'];?>）
 	</td>																
 		<td>
 		<?php echo $log_types[$v['sort']];?>

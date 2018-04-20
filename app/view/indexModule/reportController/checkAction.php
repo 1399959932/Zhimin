@@ -181,7 +181,7 @@ $arr_stattype = array('1' => '单位', '2' => '个人');?>
 									
 	</td>								
 		<td>
-		<?php echo $userarray[$data['usecode']];?>(<?php echo $data['usecode'];?>);?>
+		<?php echo $userarray[$data['usecode']];?>(<?php echo $data['usecode'];?>)
 	
 	</td>																
 		<td>

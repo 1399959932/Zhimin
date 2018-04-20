@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -53,7 +52,7 @@
 			
 			</span>
 
-			<?php $settings['site'];?>
+			<?php echo $settings['site'];?>
 		
 		</div>
 		
@@ -62,14 +61,14 @@
 		<div class="login_main">
 			<div class="login_computer">    
 			<img src="
-		<?php Zhimin::g('assets_uri');?>images/computer.png" />  
+		<?php echo Zhimin::g('assets_uri');?>images/computer.png" />  
 	</div>		
 		<div class="login_content">
 	
 	<div class="login_title">用户登录
 	</div>
 
-<form id="loginForm" action="<?php Zhimin::buildUrl('login');?>" name="login_form" method="post">
+<form id="loginForm" action="<?php echo Zhimin::buildUrl('login');?>" name="login_form" method="post">
 
 <div class="input-group">
 			    
@@ -97,7 +96,7 @@
 					<span class="error_msg_login" id="error_pwd">请输入密码
 					</span>
 			  
-			  </div>';
+			  </div>
 
 <?php if (isset($settings['safecode']) && ($settings['safecode'] == '1')) {?>
 	

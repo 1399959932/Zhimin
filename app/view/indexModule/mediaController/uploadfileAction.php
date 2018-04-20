@@ -37,7 +37,7 @@ include_once ('menu.php');
 
 <!--文件上传-->
 
-<link href="<?php Zhimin::g('assets_uri');?>/js/jquery.uploadify-v2.1.4/uploadify.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo Zhimin::g('assets_uri');?>js/jquery.uploadify-v2.1.4/uploadify.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="<?php Zhimin::g('assets_uri');?>/js/jquery.uploadify-v2.1.4/jquery.uploadify.v2.1.4.min.js">
 </script>

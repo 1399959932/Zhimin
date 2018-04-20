@@ -377,7 +377,7 @@ echo $optionsStr;	?>
 	$(document).ready(function(){	
 	/*add tree*/	
 	$("#easyui_add").combotree({
-	url:'<?php Zhimin::buildUrl('unitjson', 'other');?>&id=id&text=dname',
+	url:'<?php echo Zhimin::buildUrl('unitjson', 'other');?>&id=id&text=dname',
 	method:'get',
 	labelPosition:'top',
 	panelWidth:'500px',	

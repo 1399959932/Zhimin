@@ -52,7 +52,7 @@
 </div>					
 </div>				
 </form>				
-<div class="table_height">					
+<div class="table_height" style="overflow: hidden;">					
 	<table class="table_detail table_diff">						
 	<thead>							
 	<tr>								
@@ -84,39 +84,30 @@ foreach ($datas as $k => $data ) {?>
 	<tr class="tr_bg0<?php echo $data['jibie'];?>">								
 	<td>
 	<?php echo $i;?>
-	
 </td>									
 	<td>
-	<?php echo $data['unitname'];?>
-	
+	<?php echo $data['unitname'];?>	
 </td>									
 	<td>
 	<?php echo $data['usernum'];?>
-	
 </td>									
 	<td>
 	<?php echo $data['stationnum'];?>
-	
 </td>									
 	<td>
 	<?php echo $data['bodynum'];?>
-	
 </td>									
 	<td>
 	<?php echo round($data['stationtotsize'] / 1024, 2) . ' G';?>
-	
 </td>									
 	<td>
 	<?php echo round(($data['stationtotsize'] - $data['stationfreesize']) / 1024, 2) ;?> G
-	
 </td>									
 	<td>
 	<?php echo $data['bodyzhangnum'];?>
-	
 </td>									
 	<td>
 	<?php echo $data['bodyfeinum'];?>
-	
 </td>								
 </tr>				
 	<?php $i++;

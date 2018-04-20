@@ -39,7 +39,7 @@
 			<div class="tabel_box surpervision">
 				<?php $auth = Zhimin::getComponent('auth');?>
 				<?php if (!$auth->isSuperAdmin()) {
-				$where .= ' AND pac.applicant=\'' . $user_name . '\''; ?>
+				$where .= ' AND pac.applicant= $user_name'; ?>
 
 				<?php if ($user_auth['add'] == 1) {	 ?>
 				<div class="action_div">
@@ -265,4 +265,9 @@
 		</div>
 </body>
 </html>
-<script type="text/javascript">$(document).ready(function(){$(\'.easy_u\').combobox({panelHeight:\'120px\',selectOnNavigation:true,editable:false,labelPosition:\'top\'});	})</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.easy_u').combobox({
+		panelHeight:'120px',selectOnNavigation:true,editable:false,labelPosition:'top'});	
+	})
+</script>

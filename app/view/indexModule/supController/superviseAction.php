@@ -191,7 +191,7 @@ $arr_stattype = array('1' => '单位', '2' => '个人');?>
 									
 	</td>								
 		<td>
-		<?php echo $userarray[$data['hostcode']];?>"(<?php echo  $data['hostcode'];?>)
+		<?php echo $userarray[$data['hostcode']];?>(<?php echo  $data['hostcode'];?>)
 	
 	</td>																
 		<td>
@@ -265,7 +265,7 @@ else {?>
 	<table class="table_detail">						
 		<thead>							
 			<tr>								
-		<th class="t_back" rowspan="2" width="18%">部门<?php echo $_SESSION['zfz_type'];?>姓名
+		<th class="t_back" rowspan="2" width="18%">部门<?php echo $_SESSION['zfz_type'];?>/姓名
 		</th>								
 	<th width="8%" rowspan="2">记录仪台数
 	</th>								
