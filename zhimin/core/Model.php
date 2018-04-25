@@ -103,7 +103,7 @@ class Model
 	/**
      * @var array
      */
-	protected $_baseConfig = array('persistent' => false, 'host' => 'localhost', 'login' => 'root', 'password' => '', 'dbname' => 'zmdb', 'port' => '3306');
+	protected $_baseConfig = array('persistent' => false, 'host' => 'localhost', 'login' => 'root', 'password' => '', 'dbname' => 'zmdbm', 'port' => '3306');
 	/**
      * @param array
      */

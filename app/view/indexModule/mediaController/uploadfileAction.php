@@ -239,7 +239,7 @@ foreach ($cjsbly_types as $k => $v ) {
 	selected
 <?php }?>
 
-><?php echo $v;?>"
+><?php echo $v;?>
 </option>
 <?php }?>
 

@@ -98,6 +98,7 @@ class Zhimin
      * @var array
      * @see Zhimin::route
      */
+	//这是不是写串行了
 	static 	protected $_routeInfo = array();
 	/**
      * 存储get

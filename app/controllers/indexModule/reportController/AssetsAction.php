@@ -58,6 +58,7 @@ class AssetsAction extends Action
 			$unitsyscode = $_SESSION['unitsyscode'];
 		}
 
+		//我怀疑上面是公共的
 		$unit_m = new UnitModel();
 		$sql = 'SELECT dname, bh, unitsyscode from zm_danwei where unitsyscode like \'' . $unitsyscode . '%\' ORDER BY unitsyscode;';
 		$res = $unit_m->dquery($sql);

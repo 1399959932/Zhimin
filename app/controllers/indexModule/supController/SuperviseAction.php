@@ -58,6 +58,7 @@ class SuperviseAction extends Action
 			$unitsyscode = $_SESSION['unitsyscode'];
 		}
 
+		//我怀疑上面是公共的
 		$stattype = Zhimin::request('stattype');
 		$date_time = Zhimin::request('date_time');
 
